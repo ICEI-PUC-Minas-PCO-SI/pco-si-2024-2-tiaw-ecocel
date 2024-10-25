@@ -10,7 +10,7 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 ## Integrantes
 
-* João Vitor Vitalino da Silva Roveda
+* João Vitor Vitalino da Silva Roveda.
 * Nome completo do aluno 2
 * Nome completo do aluno 3
 * Nome completo do aluno 4
