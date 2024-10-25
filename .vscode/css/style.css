@@ -47,7 +47,7 @@ footer a {
 
 
 img {
-    
+    height: 20px;
 }
 
 @media screen and (max-width: 1330px) {
