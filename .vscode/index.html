@@ -98,20 +98,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script>
         const LIMITE_PRODUTOS = 5; // Limite de produtos exibidos
-        let produtos = []; // Array para armazenar produtos carregados do JSON ou localStorage
+        let produtos = []; // Array para armazenar produtos carregados do json ou local Storage
 
         // Função para carregar os produtos
         function carregarProdutos() {
             const produtosSalvos = JSON.parse(localStorage.getItem('produtos'));
             if (produtosSalvos) {
-                produtos = produtosSalvos; // Armazenar produtos do localStorage
+                produtos = produtosSalvos; // Armazenar produtos do local Storage
             } else {
-                // Se não houver produtos salvos, carregar do JSON
+                // Se não houver produtos salvos, carregar do json
                 fetch('produtos.json')
                     .then(response => response.json())
                     .then(data => {
-                        produtos = data.produtos; // Armazenar produtos do JSON
-                        localStorage.setItem('produtos', JSON.stringify(produtos)); // Salvar no localStorage
+                        produtos = data.produtos; // Armazenar produtos do json
+                        localStorage.setItem('produtos', JSON.stringify(produtos)); // Salvar no local Storage
                     })
                     .catch(error => console.error('Erro ao carregar JSON:', error));
             }
