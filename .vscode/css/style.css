@@ -34,9 +34,8 @@ footer {
     text-align: left; /* Alinha o conteúdo do footer à esquerda */
 }
 
-footer img {
-    width: 30px;
-    margin-right: 10px; /* Reduz a margem entre as imagens */
+.footer-brand img {
+    height: 110px;
 }
 
 footer a {
