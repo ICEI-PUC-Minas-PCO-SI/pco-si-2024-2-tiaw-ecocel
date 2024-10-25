@@ -17,6 +17,37 @@ body {
     background-color: #F5F5F5;
 }
 
+.navbar-brand img {
+    height: 40px;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+h2 {
+    color: #808080;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+footer {
+    background-color: #3CB371;
+    padding: 10px;
+    text-align: left; /* Alinha o conteúdo do footer à esquerda */
+}
+
+footer img {
+    width: 30px;
+    margin-right: 10px; /* Reduz a margem entre as imagens */
+}
+
+footer a {
+    color: #fff;
+    margin-right: 10px; /* Aproxima os ícones uns dos outros */
+}
+
 .container {
     width: 80%;
     height: 80vh;
