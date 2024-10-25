@@ -89,7 +89,7 @@
         // função para carregar o json e exibir os produtos
         fetch('produtos.json')
             .then(response => response.json())
-            .then(data => {
+            .then(produtos => {
                 const tabela = document.getElementById('tabela-produtos');
                 data.produtos.forEach(produto => {
                     const linha = document.createElement('tr');
