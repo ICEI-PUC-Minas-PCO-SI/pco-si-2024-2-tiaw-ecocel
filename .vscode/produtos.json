@@ -1,0 +1,13 @@
+{
+    "produtos": [
+      {
+        "nome": "Galaxy S22",
+        "ano": 2022,
+        "camera": "108 MP",
+        "bateria": "5000 mAh",
+        "sistema_operacional": "Android",
+        "armazenamento": "256 GB",
+        "marca": "Samsung"
+      }
+    ]
+}
