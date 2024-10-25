@@ -9,7 +9,6 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3CB371;">
         <a class="navbar-brand" href="#"><img src="img/img-ecocel.jpg" alt="Logo"></a>
-        
         <div class="ml-auto d-flex align-items-center">
             <ul class="navbar-nav mr-4">
                 <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
@@ -18,13 +17,12 @@
                 <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
             </ul>
-            
         </div>
     </nav>
 
     <div class="container mt-5" id="produtos">
         <h2>Cadastro</h2>
-        <form>
+        <form id="form-produto">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="productname">Nome</label>
@@ -32,7 +30,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="productano">Ano</label>
-                    <input type="number" class="form-control" id="productano" placeholder="Ano do prroduto">
+                    <input type="number" class="form-control" id="productano" placeholder="Ano do produto">
                 </div>
             </div>
 
@@ -48,10 +46,10 @@
             </div>
 
             <div class="form-group">
-                <label for="preferencias">Sistema opracional:</label>
+                <label for="productso">Sistema operacional:</label>
                 <select class="form-control" id="productso">
                     <option>Android</option>
-                    <option>IOS</option>
+                    <option>iOS</option>
                 </select>
             </div>
 
@@ -66,32 +64,45 @@
                 </div>
             </div>
 
-
-
-            <button type="submit" class="btn btn-dark">Cadastrar</button>
+            <button type="button" class="btn btn-dark" id="cadastrar">Cadastrar</button>
         </form>
     </div>
-    
-            </form>
-        </div>
+
+    <!-- tabela de produtos -->
+    <div class="container mt-5">
+        <h2>Produtos Cadastrados</h2>
+        <table class="table table-bordered" id="tabela-produtos">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Ano</th>
+                    <th>Câmera</th>
+                    <th>Bateria</th>
+                    <th>Sistema Operacional</th>
+                    <th>Armazenamento</th>
+                    <th>Marca</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </div>
-    <footer class="footer mt-5" style="background-color: #3CB371;">
+
+    <footer class="footer mt-5">
         <div class="container py-3">
             <a class="footer-brand" href="#"><img src="img/ig.png" alt="Instagram"></a>
             <a class="footer-brand" href="#"><img src="img/yt.png" alt="Youtube"></a>
         </div>
     </footer>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="script.js"></script>
     <script>
-        // função para carregar o json e exibir os produtos
+        // Função para carregar o JSON e exibir os produtos
         fetch('produtos.json')
             .then(response => response.json())
             .then(produtos => {
-                const tabela = document.getElementById('tabela-produtos');
-                data.produtos.forEach(produto => {
+                const tabela = document.querySelector('#tabela-produtos tbody');
+                produtos.produtos.forEach(produto => {
                     const linha = document.createElement('tr');
                     linha.innerHTML = `
                         <td>${produto.nome}</td>
@@ -105,7 +116,31 @@
                     tabela.appendChild(linha);
                 });
             })
-            .catch(error => console.error('Erro ao carregar json:', error));
+            .catch(error => console.error('Erro ao carregar JSON:', error));
+
+        // Função para adicionar um novo produto ao clicar em "Cadastrar"
+        document.getElementById('cadastrar').addEventListener('click', () => {
+            const nome = document.getElementById('productname').value;
+            const ano = document.getElementById('productano').value;
+            const camera = document.getElementById('productcam').value;
+            const bateria = document.getElementById('productbat').value;
+            const sistema = document.getElementById('productso').value;
+            const armazenamento = document.getElementById('productarm').value;
+            const marca = document.getElementById('productmark').value;
+
+            const novaLinha = `
+                <tr>
+                    <td>${nome}</td>
+                    <td>${ano}</td>
+                    <td>${camera}</td>
+                    <td>${bateria}</td>
+                    <td>${sistema}</td>
+                    <td>${armazenamento}</td>
+                    <td>${marca}</td>
+                </tr>
+            `;
+            document.querySelector('#tabela-produtos tbody').insertAdjacentHTML('beforeend', novaLinha);
+        });
     </script>
 </body>
 </html>
