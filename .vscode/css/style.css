@@ -46,19 +46,9 @@ footer a {
 
 
 
-.form-image{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: whitesmoke;
-    padding: 1rem;
+img {
+    
 }
-
-.form-image img{
-    width: 31rem;
-}
-
 
 @media screen and (max-width: 1330px) {
     .form-image{
