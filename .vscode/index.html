@@ -98,16 +98,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script>
         const LIMITE_PRODUTOS = 5; // Limite de produtos exibidos
-        let produtos = []; // Array para armazenar produtos carregados do JSON
+        let produtos = []; // Array para armazenar produtos carregados do JSON ou localStorage
 
-        // Função para carregar o json e exibir os produtos
-        fetch('produtos.json')
-            .then(response => response.json())
-            .then(data => {
-                produtos = data.produtos; // Armazenar os produtos
-                exibirProdutos(); // Chamar função para exibir os produtos
-            })
-            .catch(error => console.error('Erro ao carregar JSON:', error));
+        // Função para carregar os produtos
+        function carregarProdutos() {
+            const produtosSalvos = JSON.parse(localStorage.getItem('produtos'));
+            if (produtosSalvos) {
+                produtos = produtosSalvos; // Armazenar produtos do localStorage
+            } else {
+                // Se não houver produtos salvos, carregar do JSON
+                fetch('produtos.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        produtos = data.produtos; // Armazenar produtos do JSON
+                        localStorage.setItem('produtos', JSON.stringify(produtos)); // Salvar no localStorage
+                    })
+                    .catch(error => console.error('Erro ao carregar JSON:', error));
+            }
+            exibirProdutos(); // Chamar função para exibir os produtos
+        }
+
+        // Chame a função de carregamento ao iniciar
+        carregarProdutos();
 
         // Função para exibir produtos limitados
         function exibirProdutos() {
@@ -152,7 +164,11 @@
 
             // Adicionar novo produto ao array
             produtos.push(novoProduto);
+            localStorage.setItem('produtos', JSON.stringify(produtos)); // Atualizar localStorage
             exibirProdutos(); // Exibir produtos novamente (com o novo adicionado)
+
+            // Limpar os campos do formulário após o cadastro
+            document.getElementById('form-produto').reset();
         });
     </script>
 </body>
