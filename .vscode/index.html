@@ -37,7 +37,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="productcam">Câmera</label>
-                    <input type="text" class="form-control" id="productcam" placeholder="Pixeis da câmera">
+                    <input type="text" class="form-control" id="productcam" placeholder="Pixels da câmera">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="productbat">Bateria</label>
@@ -68,7 +68,7 @@
         </form>
     </div>
 
-    <!-- tabela de produtos -->
+    <!-- Adicionando a tabela de produtos -->
     <div class="container mt-5">
         <h2>Produtos Cadastrados</h2>
         <table class="table table-bordered" id="tabela-produtos">
@@ -87,7 +87,7 @@
         </table>
     </div>
 
-    <footer class="footer mt-5">
+    <footer class="footer mt-5" style="background-color: #3CB371;">
         <div class="container py-3">
             <a class="footer-brand" href="#"><img src="img/ig.png" alt="Instagram"></a>
             <a class="footer-brand" href="#"><img src="img/yt.png" alt="Youtube"></a>
@@ -97,26 +97,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script>
-        // Função para carregar o JSON e exibir os produtos
+        const LIMITE_PRODUTOS = 5; // Limite de produtos exibidos
+        let produtos = []; // Array para armazenar produtos carregados do JSON
+
+        // Função para carregar o json e exibir os produtos
         fetch('produtos.json')
             .then(response => response.json())
-            .then(produtos => {
-                const tabela = document.querySelector('#tabela-produtos tbody');
-                produtos.produtos.forEach(produto => {
-                    const linha = document.createElement('tr');
-                    linha.innerHTML = `
-                        <td>${produto.nome}</td>
-                        <td>${produto.ano}</td>
-                        <td>${produto.camera}</td>
-                        <td>${produto.bateria}</td>
-                        <td>${produto.sistema_operacional}</td>
-                        <td>${produto.armazenamento}</td>
-                        <td>${produto.marca}</td>
-                    `;
-                    tabela.appendChild(linha);
-                });
+            .then(data => {
+                produtos = data.produtos; // Armazenar os produtos
+                exibirProdutos(); // Chamar função para exibir os produtos
             })
             .catch(error => console.error('Erro ao carregar JSON:', error));
+
+        // Função para exibir produtos limitados
+        function exibirProdutos() {
+            const tabela = document.querySelector('#tabela-produtos tbody');
+            tabela.innerHTML = ''; // Limpar tabela
+
+            const listaProdutos = produtos.slice(0, LIMITE_PRODUTOS); // Limitar os produtos
+            listaProdutos.forEach(produto => {
+                const linha = document.createElement('tr');
+                linha.innerHTML = `
+                    <td>${produto.nome}</td>
+                    <td>${produto.ano}</td>
+                    <td>${produto.camera}</td>
+                    <td>${produto.bateria}</td>
+                    <td>${produto.sistema_operacional}</td>
+                    <td>${produto.armazenamento}</td>
+                    <td>${produto.marca}</td>
+                `;
+                tabela.appendChild(linha);
+            });
+        }
 
         // Função para adicionar um novo produto ao clicar em "Cadastrar"
         document.getElementById('cadastrar').addEventListener('click', () => {
@@ -128,18 +140,19 @@
             const armazenamento = document.getElementById('productarm').value;
             const marca = document.getElementById('productmark').value;
 
-            const novaLinha = `
-                <tr>
-                    <td>${nome}</td>
-                    <td>${ano}</td>
-                    <td>${camera}</td>
-                    <td>${bateria}</td>
-                    <td>${sistema}</td>
-                    <td>${armazenamento}</td>
-                    <td>${marca}</td>
-                </tr>
-            `;
-            document.querySelector('#tabela-produtos tbody').insertAdjacentHTML('beforeend', novaLinha);
+            const novoProduto = {
+                nome,
+                ano,
+                camera,
+                bateria,
+                sistema_operacional: sistema,
+                armazenamento,
+                marca
+            };
+
+            // Adicionar novo produto ao array
+            produtos.push(novoProduto);
+            exibirProdutos(); // Exibir produtos novamente (com o novo adicionado)
         });
     </script>
 </body>
