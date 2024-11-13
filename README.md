@@ -13,7 +13,7 @@ Temos como objetivo criar um site que facilite a escolha de um celular de forma 
 * Cauã Victor de Andrade Santos
 * Gustavo Reis Santos da Silva
 * João Vitor Vitalino da Silva Roveda
-* Samara Lana da Rocha
+* Samara Lana da Rocha 
 
 ## Professor
 
