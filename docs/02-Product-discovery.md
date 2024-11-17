@@ -1,29 +1,24 @@
 # Product discovery
-
-<span style="color:red">Pré-requisitos: <a href="01-Contexto.md"> Documentação de contexto</a></span>
-
-✅ [Documentação de Design Thinking (MIRO)](files/processo-dt.pdf)
-
 ## Etapa de entendimento
-> * ![image](https://github.com/user-attachments/assets/d3d26965-f96f-48f4-968f-fc5274431071)
+> ![image](https://github.com/user-attachments/assets/d3d26965-f96f-48f4-968f-fc5274431071)
 
-> *![image](https://github.com/user-attachments/assets/7eaee30c-2c83-4894-8093-49a17b1cf636)
+> ![image](https://github.com/user-attachments/assets/7eaee30c-2c83-4894-8093-49a17b1cf636)
 
-> * **Entrevistas qualitativas**: uma série de entrevistas qualitativas a fim de validar suposições e esclarecer dúvidas junto aos principais envolvidos;
-> * ![image](https://github.com/user-attachments/assets/150bfb59-4c3f-410b-a5d2-6b9e4f56ef81)
-
-> **Links úteis**:
-> - [Mapa de stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
+> 
+>  ![image](https://github.com/user-attachments/assets/150bfb59-4c3f-410b-a5d2-6b9e4f56ef81)
 
 ## Etapa de definição
 
 ### Personas
+![image](https://github.com/user-attachments/assets/759a643b-1a23-4536-b673-1e26f0b885d6)
+![image](https://github.com/user-attachments/assets/2a2a03c7-afa3-47f4-9cf9-ab31e6251980)
 
-**✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
+![image](https://github.com/user-attachments/assets/94651bf1-20c3-4910-9947-63df1770cf47)
+![image](https://github.com/user-attachments/assets/8d737051-7e9f-44e1-9d30-0b3039ed34da)
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Deve-se relacionar as personas identificadas no projeto, juntamente com os respectivos mapas de empatia. É importante enumerar e descrever de maneira precisa e personalizada todos os principais envolvidos na solução pretendida.
+
+
+
 
 
 ![Exemplo de persona](images/exemplo-persona.png)
