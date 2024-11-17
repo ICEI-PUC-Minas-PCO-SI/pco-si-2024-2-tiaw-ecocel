@@ -5,7 +5,7 @@
 
 ## Slides
 
-Os slides da apresentação foram elaborados e incluídos no formato PDF, abordando de forma completa todos os itens trabalhados nos demais artefatos do projeto. A apresentação está pronta para ser utilizada e reflete o conteúdo desenvolvido de maneira clara e objetiva.
+Os slides da apresentação foram elaborados e incluídos no formato PDF. A apresentação está pronta para ser utilizada e reflete o conteúdo desenvolvido de maneira clara e objetiva.
 
 [ecocel.pdf](https://github.com/user-attachments/files/17792045/ecocel.pdf)
 
