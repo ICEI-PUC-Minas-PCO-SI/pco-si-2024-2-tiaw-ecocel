@@ -4,7 +4,7 @@
 
 > ![image](https://github.com/user-attachments/assets/7eaee30c-2c83-4894-8093-49a17b1cf636)
 
-> 
+> Entrevistas qualitativas
 >  ![image](https://github.com/user-attachments/assets/150bfb59-4c3f-410b-a5d2-6b9e4f56ef81)
 
 ## Etapa de definição
