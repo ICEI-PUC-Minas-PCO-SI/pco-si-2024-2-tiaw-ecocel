@@ -21,18 +21,3 @@
 
 ![image](https://github.com/user-attachments/assets/4512b72d-70ee-4c86-94ab-91ed50e40430)
 ![image](https://github.com/user-attachments/assets/19e50dae-4f2b-43a2-99ae-212a314a91c7)
-
-
-
-
-
-
-![Exemplo de persona](images/exemplo-persona.png)
-
-
-> **Links úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
