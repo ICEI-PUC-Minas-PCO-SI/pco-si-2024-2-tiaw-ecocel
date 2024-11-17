@@ -25,19 +25,23 @@ Joel, estagiário e amante de videogames, tinha um grande sonho: viajar para Mac
 
 ## Proposta de valor
 
-**✳️✳️✳️ APRESENTE O DIAGRAMA DA PROPOSTA DE VALOR PARA CADA PERSONA ✳️✳️✳️**
-
-##### Proposta para a persona XPTO ⚠️ EXEMPLO ⚠️
-
-![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
-
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O mapa da proposta de valor é uma ferramenta que auxilia na definição do tipo de produto ou serviço que melhor atende às personas previamente estabelecidas.
 
 
-> **Links úteis**:
-> - [O que é o canvas da proposta de valor e como usar?](https://www.youtube.com/watch?v=Iqb-8Q_eiiA)
+##### Proposta para a persona Maria de Lurdes
+
+![image](https://github.com/user-attachments/assets/2a2a03c7-afa3-47f4-9cf9-ab31e6251980)
+
+##### Proposta para a persona Wanessa
+
+![image](https://github.com/user-attachments/assets/8d737051-7e9f-44e1-9d30-0b3039ed34da)
+
+##### Proposta para a persona Leticia
+
+![image](https://github.com/user-attachments/assets/13c921a6-cc04-4fd9-a71f-7167c455146c)
+
+##### Proposta para a persona Joel
+
+![image](https://github.com/user-attachments/assets/19e50dae-4f2b-43a2-99ae-212a314a91c7)
 
 ## Requisitos
 
