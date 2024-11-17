@@ -5,6 +5,7 @@
 
 ## Slides
 
+[ecocel.pdf](https://github.com/user-attachments/files/17792045/ecocel.pdf)
 
 
 ## Vídeo
