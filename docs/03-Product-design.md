@@ -1,21 +1,16 @@
 # Product design
 
-<span style="color:red">Pré-requisitos: <a href="02-Product-discovery.md"> Product discovery</a></span>
-
-
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
-
-Neste momento, transformam-se os insights e validações obtidos em soluções tangíveis e utilizáveis. Esta fase envolve a definição de uma proposta de valor, detalhando a prioridade de cada ideia, e a consequente criação de wireframes, mockups e protótipos de alta fidelidade, que especificam a interface e a experiência do usuário.
-
 
 ## Histórias de usuários
 
 Com base na análise das personas, foram identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas  ⚠️ EXEMPLO ⚠️         | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões        ⚠️ EXEMPLO ⚠️         | Permitir que possam administrar contas |
+|EU COMO              | QUERO/PRECISO                                |PARA                                       |
+|---------------------|----------------------------------------------|-------------------------------------------|
+|Dona de casa         | Celular com acesso a redes sociais           | Ter mais convivência familiar             |
+|Influencer digital   | Celular com acesso a redes sociais e câmera  | Educacional, oferencendo cursos online    |
+|Analista de marketing| Celular com acesso a internet para informação| Entender melhor a obsolecência programada |
+|Estagiário           | Celular com boa câmera e bom funcionamento   | Ter um aparelho para o dia a dia e lazer  |
 
 > ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 
