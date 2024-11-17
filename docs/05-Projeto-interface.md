@@ -9,14 +9,8 @@
 
  ## User flow
 
+![Captura de tela 2024-11-17 133216](https://github.com/user-attachments/assets/42026100-d7a7-487d-a7a7-88a2f04f6b09)
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
-
-Fluxo de usuário (user flow) é uma técnica que permite ao desenvolvedor mapear todo o fluxo de navegação do usuário na aplicação. Essa técnica serve para alinhar os caminhos e as possíveis ações que o usuário pode realizar junto com os membros da equipe.
-
-**✳️✳️✳️ COLOQUE AQUI O USER FLOW ✳️✳️✳️**
-
-![Exemplo de fluxo de telas](images/exemplo-userflow.png)
 
 > **Links úteis**:
 > - [User flow: o quê é e como fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
@@ -25,18 +19,8 @@ Fluxo de usuário (user flow) é uma técnica que permite ao desenvolvedor mapea
 
 
 ## Wireframes
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/ce6f4a8a-6290-4a66-bd4f-482e0f404741">
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
-
-São protótipos usados no design de interface para sugerir a estrutura de um site web e seu relacionamento entre suas páginas. Um wireframe web é uma ilustração que mostra o layout dos elementos fundamentais na interface.
-
-**✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
-
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
-
-Descrição para a tela XPTO
-
-![Exemplo de wireframe](images/exemplo-wireframe.png)
 
  
 > **Links úteis**:
@@ -49,11 +33,4 @@ Descrição para a tela XPTO
 
 
 ### Protótipo Interativo
-
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Um protótipo interativo apresenta o projeto das interfaces e permite ao usuário navegar pelas funcionalidades como se estivesse utilizando o software finalizado. Utilize as mesmas ferramentas de criação de wireframes para a montagem do seu protótipo interativo. Inclua o link para o protótipo interativo do projeto.
-
-**✳️✳️✳️ COLOQUE AQUI UM IFRAME COM SEU PROTÓTIPO INTERATIVO ✳️✳️✳️**
-
-✅ [Protótipo interativo](https://marvelapp.com/prototype/4hd6091?emb=1&iosapp=false&frameless=false)  ⚠️ EXEMPLO ⚠️
+https://www.figma.com/proto/ZsqxIZWDPTXOhLyPAtohpG/Prototipo?m=dev&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&node-id=17-591&starting-point-node-id=17%3A591
