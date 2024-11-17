@@ -82,10 +82,10 @@ Liste todas as ferramentas que foram empregadas no projeto, justificando a escol
 
 | Ambiente                            | Plataforma                         | Link de acesso                       |
 |-------------------------------------|------------------------------------|--------------------------------------|
-| Processo de Design Thinking         | Miro                               | https://....   ⚠️ EXEMPLO ⚠️        |
+| Processo de Design Thinking         | Miro                               | https://miro.com/app/board/uXjVKoqwSkM=/        |
 | Repositório de código fonte         | GitHub                             | https://....   ⚠️ EXEMPLO ⚠️        |
 | Documentos do projeto               | GitHub                             | http://....    ⚠️ EXEMPLO ⚠️        |
 | Gerenciamento do projeto            | GitHub Projects                    | http://....    ⚠️ EXEMPLO ⚠️        |
-| Projeto de interface                | Figma                              | http://....    ⚠️ EXEMPLO ⚠️        |
+| Projeto de interface                | Figma                              | [http://....    ⚠️ EXEMPLO ⚠️](https://www.figma.com/design/tz1J2x5aqguZTmzSWMj3Jh/Wireframes?node-id=0-1&t=eK5jTFZS7ujGEi0u-1)        |
 | Hospedagem                          | Vercel                             | http://....    ⚠️ EXEMPLO ⚠️        |
  
