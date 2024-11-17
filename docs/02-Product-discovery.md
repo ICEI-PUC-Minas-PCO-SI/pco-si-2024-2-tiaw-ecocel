@@ -5,14 +5,12 @@
 ✅ [Documentação de Design Thinking (MIRO)](files/processo-dt.pdf)
 
 ## Etapa de entendimento
+> * ![image](https://github.com/user-attachments/assets/d3d26965-f96f-48f4-968f-fc5274431071)
 
-**✳️✳️✳️ APRESENTE OS ARTEFATOS DA ETAPA  ✳️✳️✳️**
+> *![image](https://github.com/user-attachments/assets/7eaee30c-2c83-4894-8093-49a17b1cf636)
 
-> * **Matriz CSD**![image](https://github.com/user-attachments/assets/d3d26965-f96f-48f4-968f-fc5274431071)
-
-> * **Mapa de stakeholders**: ferramenta que permite identificar e entender o grupo de pessoas e entidades que devem ser analisados e consultados para obter uma visão mais ampla do problema;
 > * **Entrevistas qualitativas**: uma série de entrevistas qualitativas a fim de validar suposições e esclarecer dúvidas junto aos principais envolvidos;
-> * **Highlights de pesquisa**: um compilado das informações levantadas durante as entrevistas realizadas.
+> * ![image](https://github.com/user-attachments/assets/150bfb59-4c3f-410b-a5d2-6b9e4f56ef81)
 
 > **Links úteis**:
 > - [Mapa de stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
