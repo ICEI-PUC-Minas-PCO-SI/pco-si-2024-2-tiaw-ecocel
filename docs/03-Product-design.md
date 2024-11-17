@@ -12,16 +12,15 @@ Com base na análise das personas, foram identificadas as seguintes histórias d
 |Analista de marketing| Celular com acesso a internet para informação| Entender melhor a obsolecência programada |
 |Estagiário           | Celular com boa câmera e bom funcionamento   | Ter um aparelho para o dia a dia e lazer  |
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 
-Apresente aqui as histórias de usuários que são relevantes para o projeto da sua solução. As histórias de usuários consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuários por contexto, para facilitar consultas recorrentes a esta parte do documento.
+Dona Maria de Lurdes, aos 67 anos, sentia falta dos risos e abraços da família, que morava longe. Todos estavam sempre ocupados, mas ela queria saber das novidades e contar suas histórias. Um dia, ao ver uma amiga usando um celular, decidiu que também queria aprender. Com o apoio dos netos, ela escolheu um modelo simples e logo começou a mandar mensagens e fazer chamadas de vídeo. Agora, todos os domingos, ela compartilha um café virtual com os filhos e netos, sentindo-se mais perto deles do que nunca.
 
-> **Links úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (user stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 common user story mistakes](https://airfocus.com/blog/user-story-mistakes/)
+Wanessa, uma influencer focada em bem-estar e autodesenvolvimento, sonhava em levar seus cursos online para mais pessoas, mas seu celular antigo não conseguia acompanhar o ritmo. Ela sabia que precisaria de um aparelho com melhor câmera, maior capacidade e velocidade para gravar vídeos de qualidade. Após escolher o modelo ideal, começou a produzir conteúdos mais atrativos e interativos para seus seguidores. Seus cursos, agora com vídeos mais profissionais, começaram a vender como nunca antes. Com o novo celular, Wanessa se sentiu mais próxima de seus alunos e mais confiável como referência no seu nicho.
+
+Leticia, analista de marketing e especialista em obsolescência programada, sabia que a tecnologia estava evoluindo rapidamente, e seu celular antigo já não atendia às suas necessidades profissionais. Ela precisava de um dispositivo ágil para estudar tendências e analisar dados com mais eficiência. Ao adquirir um celular mais moderno, sua produtividade aumentou, e ela conseguiu explorar novas ferramentas para entender melhor o ciclo de vida dos produtos. Com o novo aparelho, Julia sentiu-se preparada para enfrentar os desafios do mercado e otimizar suas estratégias. Agora, ela também compartilha suas pesquisas sobre obsolescência com colegas, ampliando sua rede de contatos e influenciando o setor.
+
+Joel, estagiário e amante de videogames, tinha um grande sonho: viajar para Machu Picchu e, ao mesmo tempo, continuar jogando e participando de campeonatos online. Mas seu celular antigo não suportava os jogos pesados nem as conexões de alta qualidade que ele precisava. Decidido a não abrir mão da viagem, ele investiu em um celular novo, com ótima performance e bateria duradoura. Chegando em Machu Picchu, ele aproveitou a beleza do local e ainda conseguiu competir em seu torneio, com uma conexão estável. Agora, Joel vive a aventura de explorar o mundo enquanto joga, com o celular sendo sua principal ferramenta para unir esses dois sonhos.
+
 
 
 ## Proposta de valor
