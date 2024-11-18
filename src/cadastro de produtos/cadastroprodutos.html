@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastro de Produtos</title>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="img/img-ecocel.jpg" alt="Logo" class="logo">
+        </a>
+
+        <!-- Links de navegação -->
+        <ul class="navbar-links">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Dispositivos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Sustentabilidade</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
+        </ul>
+
+        <!-- Botões de Login e Cadastro -->
+        <div class="navbar-buttons">
+            <a class="btn btn-light login-btn" href="#">Login</a>
+            <a class="btn btn-dark register-btn" href="#">Cadastro</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5" id="produtos">
+        <h2>Cadastro</h2>
+        <form id="form-produto">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="productname">Nome</label>
+                    <input type="text" class="form-control" id="productname" placeholder="Nome do produto">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="productano">Ano</label>
+                    <input type="number" class="form-control" id="productano" placeholder="Ano do produto">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="productcam">Câmera</label>
+                    <input type="text" class="form-control" id="productcam" placeholder="Pixels da câmera">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="productbat">Bateria</label>
+                    <input type="text" class="form-control" id="productbat" placeholder="Durabilidade da bateria">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="productso">Sistema operacional:</label>
+                <select class="form-control" id="productso">
+                    <option>Android</option>
+                    <option>iOS</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="productarm">Armazenamento</label>
+                    <input type="text" class="form-control" id="productarm" placeholder="Armazenamento do produto">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="productmark">Marca</label>
+                    <input type="text" class="form-control" id="productmark" placeholder="Marca do produto">
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-dark" id="cadastrar">Cadastrar</button>
+        </form>
+    </div>
+
+    <!-- Adicionando a tabela de produtos -->
+    <div class="container mt-5">
+        <h2>Produtos Cadastrados</h2>
+        <table class="table table-bordered" id="tabela-produtos">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Ano</th>
+                    <th>Câmera</th>
+                    <th>Bateria</th>
+                    <th>Sistema Operacional</th>
+                    <th>Armazenamento</th>
+                    <th>Marca</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <footer class="footer mt-5" style="background-color: #3CB371;">
+        <div class="container py-3">
+            <a class="footer-brand" href="#"><img src="img/ig-removebg-preview.png" alt="Instagram"></a>
+            <a class="footer-brand" href="#"><img src="img/yt-removebg-preview.png" alt="Youtube"></a>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script>
+        const LIMITE_PRODUTOS = 5; // Limite de produtos exibidos
+        let produtos = []; // Array para armazenar produtos carregados do json ou local Storage
+
+        // Função para carregar os produtos
+        function carregarProdutos() {
+            const produtosSalvos = JSON.parse(localStorage.getItem('produtos'));
+            if (produtosSalvos) {
+                produtos = produtosSalvos; // Armazenar produtos do local Storage
+            } else {
+                // Se não houver produtos salvos, carregar do json
+                fetch('produtos.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        produtos = data.produtos; // Armazenar produtos do json
+                        localStorage.setItem('produtos', JSON.stringify(produtos)); // Salvar no local Storage
+                    })
+                    .catch(error => console.error('Erro ao carregar JSON:', error));
+            }
+            exibirProdutos(); // Chamar função para exibir os produtos
+        }
+
+        // Chame a função de carregamento ao iniciar
+        carregarProdutos();
+
+        // Função para exibir produtos limitados
+        function exibirProdutos() {
+            const tabela = document.querySelector('#tabela-produtos tbody');
+            tabela.innerHTML = ''; // Limpar tabela
+
+            const listaProdutos = produtos.slice(0, LIMITE_PRODUTOS); // Limitar os produtos
+            listaProdutos.forEach(produto => {
+                const linha = document.createElement('tr');
+                linha.innerHTML = `
+                    <td>${produto.nome}</td>
+                    <td>${produto.ano}</td>
+                    <td>${produto.camera}</td>
+                    <td>${produto.bateria}</td>
+                    <td>${produto.sistema_operacional}</td>
+                    <td>${produto.armazenamento}</td>
+                    <td>${produto.marca}</td>
+                `;
+                tabela.appendChild(linha);
+            });
+        }
+
+        // Função para adicionar um novo produto ao clicar em "Cadastrar"
+        document.getElementById('cadastrar').addEventListener('click', () => {
+            const nome = document.getElementById('productname').value;
+            const ano = document.getElementById('productano').value;
+            const camera = document.getElementById('productcam').value;
+            const bateria = document.getElementById('productbat').value;
+            const sistema = document.getElementById('productso').value;
+            const armazenamento = document.getElementById('productarm').value;
+            const marca = document.getElementById('productmark').value;
+
+            const novoProduto = {
+                nome,
+                ano,
+                camera,
+                bateria,
+                sistema_operacional: sistema,
+                armazenamento,
+                marca
+            };
+
+            // Adicionar novo produto ao array
+            produtos.push(novoProduto);
+            localStorage.setItem('produtos', JSON.stringify(produtos)); // Atualizar localStorage
+            exibirProdutos(); // Exibir produtos novamente (com o novo adicionado)
+
+            // Limpar os campos do formulário após o cadastro
+            document.getElementById('form-produto').reset();
+        });
+    </script>
+</body>
+</html>

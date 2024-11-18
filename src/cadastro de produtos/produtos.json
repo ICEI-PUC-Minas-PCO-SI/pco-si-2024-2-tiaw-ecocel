@@ -1,0 +1,31 @@
+{
+    "produtos": [
+      {
+        "nome": "Galaxy S22",
+        "ano": 2022,
+        "camera": "108 MP",
+        "bateria": "5000 mAh",
+        "sistema_operacional": "Android",
+        "armazenamento": "256 GB",
+        "marca": "Samsung"
+      },
+      {
+        "nome": "iPhone 14 Pro",
+        "ano": 2023,
+        "camera": "48 MP",
+        "bateria": "3200 mAh",
+        "sistema_operacional": "IOS",
+        "armazenamento": "128 GB",
+        "marca": "Apple"
+      },
+      {
+        "nome": "Pixel 7",
+        "ano": 2022,
+        "camera": "50 MP",
+        "bateria": "4355 mAh",
+        "sistema_operacional": "Android",
+        "armazenamento": "128 GB",
+        "marca": "Google"
+      }
+    ]
+  }
