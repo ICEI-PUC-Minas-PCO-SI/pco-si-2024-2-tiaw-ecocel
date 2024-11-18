@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 1%;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+   
+    background-color: #F5F5F5;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3CB371;
+    padding: 10px 20px;
+}
+
+/* Estilização do logo */
+.navbar .logo {
+    height: 40px;
+}
+
+/* Links de navegação */
+.navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-links .nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-links .nav-link.active {
+    background-color: white;
+    color: #3CB371;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar-links .nav-link:hover {
+    color: #d4f1d4;
+}
+
+/* Botões de Login e Cadastro */
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-buttons .login-btn {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-buttons .register-btn {
+    border: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+h2 {
+    color: #808080;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 500px;
+}
+
+.accordion{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5 px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.accordion-header spam{
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.accordion-body{
+    color: #444;
+    font-size: 14px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity .3s;
+}
+
+.accordion-body.active{
+    height: 100%;
+    opacity: 1;
+    padding: 5px 0px;
+}
+
+.arrow{
+    transition: transform .2s linear;
+}
+
+.accordion:has(.active) .arrow {
+    transform: rotate(180deg);
+}
+
+footer {
+    background-color: #3CB371;
+    padding: 10px;
+    text-align: left; /* Alinha o conteúdo do footer à esquerda */
+}
+
+.footer-brand img {
+    height: 110px;
+}
+
+footer a {
+    color: #fff;
+    margin-right: 10px; /* Aproxima os ícones uns dos outros */
+}
