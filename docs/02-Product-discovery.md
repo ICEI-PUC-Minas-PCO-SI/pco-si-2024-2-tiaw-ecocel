@@ -11,13 +11,9 @@
 
 ### Personas
 ![image](https://github.com/user-attachments/assets/759a643b-1a23-4536-b673-1e26f0b885d6)
-![image](https://github.com/user-attachments/assets/2a2a03c7-afa3-47f4-9cf9-ab31e6251980)
 
 ![image](https://github.com/user-attachments/assets/94651bf1-20c3-4910-9947-63df1770cf47)
-![image](https://github.com/user-attachments/assets/8d737051-7e9f-44e1-9d30-0b3039ed34da)
 
 ![image](https://github.com/user-attachments/assets/8b1b9bab-6838-4c12-ad6f-7160ab7f3ad3)
-![image](https://github.com/user-attachments/assets/13c921a6-cc04-4fd9-a71f-7167c455146c)
 
 ![image](https://github.com/user-attachments/assets/4512b72d-70ee-4c86-94ab-91ed50e40430)
-![image](https://github.com/user-attachments/assets/19e50dae-4f2b-43a2-99ae-212a314a91c7)
