@@ -1,0 +1,144 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de Celulares</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="imagens/ecocel.jpeg" alt="Logo do site" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Dispositivos</a></li>
+                <li><a href="#" class="nav-link">Sustentabilidade</a></li>
+                <li><a href="#" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="signup-btn">Cadastro</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <aside class="filter-container">
+                <h2>Filtrar por:</h2>
+                <form id="filterForm">
+                    <div class="filter-item">
+                        <label for="marca">Marca:</label>
+                        <select id="marca" name="marca">
+                            <option value="">Selecione</option>
+                            <option value="Samsung">Samsung</option>
+                            <option value="Apple">Apple</option>
+                            <option value="Xiaomi">Xiaomi</option>
+                            <option value="Motorola">Motorola</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-item">
+                        <label for="durabilidade">Durabilidade:</label>
+                        <div id="durabilidade" class="rating" data-rating="0">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-item">
+                        <label for="camera">Câmera:</label>
+                        <div id="camera" class="rating" data-rating="0">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-item">
+                        <label for="bateria">Bateria:</label>
+                        <div id="bateria" class="rating" data-rating="0">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-item">
+                        <label for="preco">Faixa de Preço:</label>
+                        <input type="range" id="preco" name="preco" min="0" max="10000" step="500" value="0" oninput="this.nextElementSibling.value = this.value">
+                        <output>0</output>
+                    </div>
+
+                    <div class="filter-item">
+                        <label for="favoritos">Favoritos:</label>
+                        <input type="checkbox" id="favoritos" name="favoritos">
+                    </div>
+
+                    <button type="button" onclick="filtrar()">Filtrar</button>
+                </form>
+            </aside>
+
+            <section class="filtered-results">
+                <h2>Resultados do Filtro</h2>
+                <div class="product-list"></div>
+            </section>
+        </div>
+
+        <section class="other-products">
+            <h2>Outros Aparelhos</h2>
+            <div class="product-list">
+                <div class="card">
+                    <img src="imagens/sucqozlsaqcfve2l21vahupkykfnoeg5xbfq_640x640+fill_ffffff.jpeg" alt="iPhone 15 Pro Max">
+                    <h3>iPhone 15 Pro Max</h3>
+                    <p>Preço Médio: R$ 9.999,00</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/iphone14.jpg" alt="iPhone 14">
+                    <h3>iPhone 14</h3>
+                    <p>Preço Médio: R$ 7.499,00</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/motog53.webp" alt="Motorola G53">
+                    <h3>Motorola G53</h3>
+                    <p>Preço Médio: R$ 1.699,00</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/samsungs23ultra.webp" alt="Samsung S23 Ultra">
+                    <h3>Samsung S23 Ultra</h3>
+                    <p>Preço Médio: R$ 5.499,00</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/SamsungGalaxyA54.webp" alt="Samsung Galaxy A54">
+                    <h3>Samsung Galaxy A54</h3>
+                    <p>Preço Médio: R$ 1.899,00</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/XiaomiRedmi12Pro.jpg" alt="Xiaomi Redmi Note 12 Pro">
+                    <h3>Xiaomi Redmi Note 12 Pro</h3>
+                    <p>Preço Médio: R$ 2.100,00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; ecocel - 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
