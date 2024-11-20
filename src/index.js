@@ -1,28 +1,27 @@
-// Trabalho Interdisciplinar 1 - Aplicações Web
-//
-// Esse módulo implementa uma API RESTful baseada no JSONServer
-// O servidor JSONServer fica hospedado na seguinte URL
-// https://jsonserver.rommelpuc.repl.co/contatos
-//
-// Para montar um servidor para o seu projeto, acesse o projeto 
-// do JSONServer no Replit, faça o FORK do projeto e altere o 
-// arquivo db.json para incluir os dados do seu projeto.
-//
-// URL Projeto JSONServer: https://replit.com/@rommelpuc/JSONServer
-//
-// Autor: Rommel Vieira Carneiro
-// Data: 03/10/2023
+document.querySelector("form").addEventListener("submit", function(event) {
+  let senha = document.getElementById("senha").value;
+  let confirmarSenha = document.getElementById("confirmarSenha").value;
 
-const jsonServer = require('json-server')
-const server = jsonServer.create()
-const router = jsonServer.router('./db/db.json')
+  // Verifica se as senhas coincidem
+  if (senha !== confirmarSenha) {
+      alert("As senhas não coincidem. Por favor, tente novamente.");
+      event.preventDefault(); // Impede o envio do formulário se as senhas não coincidirem
+  }
   
-// Para permitir que os dados sejam alterados, altere a linha abaixo
-// colocando o atributo readOnly como false.
-const middlewares = jsonServer.defaults({ noCors: true })
-server.use(middlewares)
-server.use(router)
+  // Verifica se os campos obrigatórios estão preenchidos
+  let nome = document.getElementById("nome").value;
+  let idade = document.getElementById("idade").value;
+  let email = document.getElementById("email").value;
 
-server.listen(3000, () => {
-  console.log(`JSON Server is running em http://localhost:3000`)
-})
+  if (!nome || !idade || !email) {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+      event.preventDefault(); // Impede o envio se os campos obrigatórios não estiverem preenchidos
+  }
+
+  // Verifica se o usuário aceitou os termos e condições
+  let termos = document.getElementById("termos").checked;
+  if (!termos) {
+      alert("Você deve aceitar os termos e condições antes de continuar.");
+      event.preventDefault(); // Impede o envio do formulário se os termos não forem aceitos
+  }
+});
