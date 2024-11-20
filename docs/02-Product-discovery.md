@@ -64,7 +64,7 @@
 ## Etapa de definição
 
 ### Personas
-![image](https://github.com/user-attachments/assets/759a643b-1a23-4536-b673-1e26f0b885d6)
+![image](https://github.com/user-attachments/assets/c67760b1-31b4-4f7f-be48-207e0df73ece)
 
 ![image](https://github.com/user-attachments/assets/94651bf1-20c3-4910-9947-63df1770cf47)
 
