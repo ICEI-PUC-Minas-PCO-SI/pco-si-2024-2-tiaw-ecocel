@@ -23,7 +23,7 @@
 > #### Se houvesse um site informativo sobre obsolescência programada, você acessaria? Que tipo de informação seria útil para você?
 > Acessaria, sim. Seria útil obter insights sobre a durabilidade dos dispositivos e estratégias para otimizar o ciclo de vida dos produtos.
 >
-####Entrevista 2
+#### Entrevista 2
 >  #### Qual sua idade? E qual sua renda mensal?
 > 23 anos, R$6000,00
 > #### Você se considera uma pessoa consumista?
@@ -41,7 +41,7 @@
 > #### Se houvesse um site informativo sobre obsolescência programada, você acessaria? Que tipo de informação seria útil para você?
 > Sim, a informação mais útil seria as linhas de celular mais duráveis de cada marca.
 >
-####Entrevista 3 
+#### Entrevista 3 
 >  #### Qual sua idade? E qual sua renda mensal?
 > 17 anos, R$500,00
 > #### Você se considera uma pessoa consumista?
