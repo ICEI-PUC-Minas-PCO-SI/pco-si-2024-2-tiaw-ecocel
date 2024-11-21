@@ -34,32 +34,38 @@
         <form id="form-produto">
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="productname">Nome</label>
-                    <input type="text" class="form-control" id="productname" placeholder="Nome do produto">
+                    <label for="productid">ID</label>
+                    <input type="number" class="form-control" id="productid" placeholder="ID do produto">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="productano">Ano</label>
-                    <input type="number" class="form-control" id="productano" placeholder="Ano do produto">
+                    <label for="productname">Nome</label>
+                    <input type="text" class="form-control" id="productname" placeholder="Nome do produto">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-6">
+                    <label for="productano">Ano</label>
+                    <input type="number" class="form-control" id="productano" placeholder="Ano do produto">
+                </div>
+                <div class="form-group col-md-6">
                     <label for="productcam">Câmera</label>
                     <input type="text" class="form-control" id="productcam" placeholder="Pixels da câmera">
                 </div>
+            </div>
+
+            <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="productbat">Bateria</label>
                     <input type="text" class="form-control" id="productbat" placeholder="Durabilidade da bateria">
                 </div>
-            </div>
-
-            <div class="form-group">
-                <label for="productso">Sistema operacional:</label>
-                <select class="form-control" id="productso">
-                    <option>Android</option>
-                    <option>iOS</option>
-                </select>
+                <div class="form-group col-md-6">
+                    <label for="productso">Sistema operacional:</label>
+                    <select class="form-control" id="productso">
+                        <option>Android</option>
+                        <option>iOS</option>
+                    </select>
+                </div>
             </div>
 
             <div class="form-row">
@@ -83,6 +89,7 @@
         <table class="table table-bordered" id="tabela-produtos">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Nome</th>
                     <th>Ano</th>
                     <th>Câmera</th>
@@ -98,8 +105,8 @@
 
     <footer class="footer mt-5" style="background-color: #3CB371;">
         <div class="container py-3">
-            <a class="footer-brand" href="#"><img src="img/ig-removebg-preview.png" alt="Instagram"></a>
-            <a class="footer-brand" href="#"><img src="img/yt-removebg-preview.png" alt="Youtube"></a>
+            <a class="footer-brand" href="#"><img src="img/ig.png" alt="Instagram"></a>
+            <a class="footer-brand" href="#"><img src="img/yt.png" alt="Youtube"></a>
         </div>
     </footer>
 
@@ -112,15 +119,16 @@
         // Função para carregar os produtos
         function carregarProdutos() {
             const produtosSalvos = JSON.parse(localStorage.getItem('produtos'));
+            console.log(produtosSalvos); // Verifique os dados carregados do localStorage
             if (produtosSalvos) {
-                produtos = produtosSalvos; // Armazenar produtos do local Storage
+                produtos = produtosSalvos; // Armazenar produtos do localStorage
             } else {
                 // Se não houver produtos salvos, carregar do json
                 fetch('produtos.json')
                     .then(response => response.json())
                     .then(data => {
                         produtos = data.produtos; // Armazenar produtos do json
-                        localStorage.setItem('produtos', JSON.stringify(produtos)); // Salvar no local Storage
+                        localStorage.setItem('produtos', JSON.stringify(produtos)); // Salvar no localStorage
                     })
                     .catch(error => console.error('Erro ao carregar JSON:', error));
             }
@@ -136,9 +144,11 @@
             tabela.innerHTML = ''; // Limpar tabela
 
             const listaProdutos = produtos.slice(0, LIMITE_PRODUTOS); // Limitar os produtos
+            console.log(listaProdutos); // Verifique os produtos a serem exibidos
             listaProdutos.forEach(produto => {
                 const linha = document.createElement('tr');
                 linha.innerHTML = `
+                    <td>${produto.id}</td>
                     <td>${produto.nome}</td>
                     <td>${produto.ano}</td>
                     <td>${produto.camera}</td>
@@ -153,6 +163,14 @@
 
         // Função para adicionar um novo produto ao clicar em "Cadastrar"
         document.getElementById('cadastrar').addEventListener('click', () => {
+            const id = document.getElementById('productid').value;
+            
+            // Verificar se o ID já existe no array de produtos
+            if (produtos.some(produto => produto.id === parseInt(id))) {
+                alert('ID já existe!');
+                return; // Impede a adição de um produto com ID duplicado
+            }
+
             const nome = document.getElementById('productname').value;
             const ano = document.getElementById('productano').value;
             const camera = document.getElementById('productcam').value;
@@ -162,6 +180,7 @@
             const marca = document.getElementById('productmark').value;
 
             const novoProduto = {
+                id: parseInt(id), // Assegure-se de que o ID seja numérico
                 nome,
                 ano,
                 camera,

@@ -1,7 +1,7 @@
 {
   "produtos": [
     {
-      "id": 1,
+      "id": 0,
       "nome": "Galaxy S22",
       "ano": 2022,
       "camera": "108 MP",
