@@ -1,3 +1,26 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estrutura básica */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Navbar */
 .navbar {
     display: flex;
     align-items: center;
@@ -6,7 +29,6 @@
     padding: 10px 20px;
 }
 
-/* Estilização do logo */
 .navbar .logo {
     height: 40px;
 }
@@ -45,6 +67,7 @@
 .navbar-buttons {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .navbar-buttons .login-btn {
@@ -55,65 +78,149 @@
 }
 
 .navbar-buttons .register-btn {
-    border: 5px;
+    border: none;
     text-decoration: none;
     color: white;
     font-weight: 500;
+    background-color: transparent;
     transition: color 0.3s;
 }
 
-
-
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+/* Formulário e Mapa */
+#form-container {
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-main {
-    flex: 1;
+
+#form-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
 }
+
+#form-container input,
+#form-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#form-container button {
+    background-color: #3CB371;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#form-container button:hover {
+    background-color: #2d8c5c;
+}
+
 #map {
     height: 500px;
     width: 100%;
     margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-#form-container {
-    margin: 20px;
-    font-family: Arial, sans-serif;
-}
-input, button {
-    padding: 10px;
-    margin: 5px 0;
-    width: 100%;
-    max-width: 400px;
-    font-size: 16px;
-}
+
+/* Relatório de Pontos */
 #places-report {
     margin-top: 20px;
     font-family: Arial, sans-serif;
 }
+
 #places-report ul {
     list-style-type: none;
     padding: 0;
 }
+
 #places-report li {
     padding: 8px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     margin-bottom: 5px;
 }
+
 #places-report li strong {
     color: #333;
 }
+
+/* Rodapé */
 footer {
     background-color: #3CB371;
     text-align: center;
     padding: 10px 0;
     color: white;
 }
+
 footer a img {
     width: 40px;
     margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+footer a img:hover {
+    transform: scale(1.2);
+}
+
+/* ===== Responsividade ===== */
+
+/* Tablets (768px a 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #form-container h1 {
+        font-size: 1.5rem;
+    }
+
+    #map {
+        height: 300px;
+    }
+
+    #places-report {
+        padding: 0 10px;
+    }
+}
+
+/* Celulares pequenos (menores que 480px) */
+@media (max-width: 480px) {
+    .navbar .logo {
+        max-height: 40px;
+    }
+
+    #form-container input,
+    #form-container button {
+        font-size: 0.9rem;
+    }
+
+    footer a img {
+        width: 25px;
+    }
 }
