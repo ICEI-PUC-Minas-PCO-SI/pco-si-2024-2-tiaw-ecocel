@@ -9,7 +9,9 @@
 
  ## User flow
 
-<img width="403" alt="Captura de tela 2024-11-17 134521" src="https://github.com/user-attachments/assets/2d473472-3c18-466a-b022-13b6fb5f064b">
+![Captura de tela 2024-11-17 133216](https://github.com/user-attachments/assets/6681db17-d90f-4aa1-9afd-d65f2762282b)
+
+
 
 
 > **Links úteis**:
@@ -18,7 +20,10 @@
 > - [Top 25 user flow tools & templates for smooth](https://www.mockplus.com/blog/post/user-flow-tools)
 
 ## Wireframes
-<img width="959" alt="image" src="https://github.com/user-attachments/assets/ce6f4a8a-6290-4a66-bd4f-482e0f404741">
+<img width="952" alt="image" src="https://github.com/user-attachments/assets/36cf3aec-ca8d-4b93-a39f-f952b1e60300">
+<img width="950" alt="image" src="https://github.com/user-attachments/assets/041214c9-55c5-401e-898d-490d89622770">
+<img width="573" alt="image" src="https://github.com/user-attachments/assets/6f4bfff9-e85a-43a9-8106-55cf7bbb09c1">
+
 
 > **Links úteis**:
 > - [Protótipos: baixa, média ou alta fidelidade?](https://medium.com/ladies-that-ux-br/prot%C3%B3tipos-baixa-m%C3%A9dia-ou-alta-fidelidade-71d897559135)
