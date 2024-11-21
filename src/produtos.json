@@ -1,6 +1,7 @@
 {
   "produtos": [
     {
+      "id": 1,
       "nome": "Galaxy S22",
       "ano": 2022,
       "camera": "108 MP",
@@ -10,15 +11,17 @@
       "marca": "Samsung"
     },
     {
+      "id": 2,
       "nome": "iPhone 14 Pro",
       "ano": 2023,
       "camera": "48 MP",
       "bateria": "3200 mAh",
-      "sistema_operacional": "IOS",
+      "sistema_operacional": "iOS",
       "armazenamento": "128 GB",
       "marca": "Apple"
     },
     {
+      "id": 3,
       "nome": "Pixel 7",
       "ano": 2022,
       "camera": "50 MP",
