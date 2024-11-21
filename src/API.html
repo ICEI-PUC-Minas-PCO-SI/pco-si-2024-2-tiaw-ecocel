@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TIAW/css/style-API.css">
+    <title>Pontos de Reciclagem de Eletrônicos</title>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="img/img-ecocel.jpg" alt="Logo" class="logo">
+        </a>
+
+        <!-- Links de navegação -->
+        <ul class="navbar-links">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Dispositivos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Sustentabilidade</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
+        </ul>
+
+        <!-- Botões de Login e Cadastro -->
+        <div class="navbar-buttons">
+            <a class="btn btn-light login-btn" href="#">Login</a>
+            <a class="btn btn-dark register-btn" href="#">Cadastro</a>
+        </div>
+    </nav>
+
+    <main>
+        <div id="form-container">
+            <h1>Encontre Pontos de Reciclagem de Eletrônicos Próximos</h1>
+            <form id="cep-form">
+                <label for="cep">Digite o CEP:</label>
+                <input type="text" id="cep" placeholder="Ex: 01001-000" required>
+                <label for="distance">Distância (em metros):</label>
+                <input type="number" id="distance" placeholder="Ex: 5000" value="5000" required>
+                <button type="submit">Buscar</button>
+            </form>
+            <div id="error-message" style="color: red;"></div>
+        </div>
+
+        <div id="map"></div>
+
+        <div id="places-report">
+            <h2>Pontos de Reciclagem de Eletrônicos Encontrados:</h2>
+            <ul id="places-list"></ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a class="footer-brand" href="#"><img src="img/ig-removebg-preview.png" alt="Instagram"></a>
+            <a class="footer-brand" href="#"><img src="img/yt-removebg-preview.png" alt="Youtube"></a>
+        </div>
+    </footer>
+
+    <script>
+        const apiKey = "AIzaSyCyUsyC8niOyGtErvz5zZNQ8EjcMJ5ZsoA"; // Substitua pela sua chave correta
+
+        // Obter coordenadas a partir do CEP
+        async function getCoordinatesFromCEP(cep) {
+            const geocodeURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${cep}&key=${apiKey}`;
+            try {
+                const response = await fetch(geocodeURL);
+                const data = await response.json();
+                if (data.results && data.results.length > 0) {
+                    return data.results[0].geometry.location;
+                } else {
+                    throw new Error("Não foi possível encontrar coordenadas para o CEP.");
+                }
+            } catch (error) {
+                throw new Error("Erro ao obter coordenadas: " + error.message);
+            }
+        }
+
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: -23.55052, lng: -46.633308 }, // Posição padrão (São Paulo)
+                zoom: 12,
+            });
+
+            const service = new google.maps.places.PlacesService(map);
+            let markers = [];
+
+            function addMarkers(results) {
+                markers.forEach(marker => marker.setMap(null)); // Remove marcadores anteriores
+                markers = [];
+
+                const placesList = document.getElementById("places-list");
+                placesList.innerHTML = "";
+
+                if (!results || results.length === 0) {
+                    console.log("Nenhum local encontrado.");
+                    return;
+                }
+
+                results.forEach(place => {
+                    const marker = new google.maps.Marker({
+                        position: place.geometry.location,
+                        map: map,
+                        title: place.name,
+                        icon: {
+                            url: "https://maps.google.com/mapfiles/kml/shapes/recycle.png",
+                            scaledSize: new google.maps.Size(32, 32),
+                        },
+                    });
+
+                    const infoWindow = new google.maps.InfoWindow({
+                        content: `<strong>${place.name}</strong><br>${place.vicinity}`,
+                    });
+
+                    marker.addListener("click", () => {
+                        infoWindow.open(map, marker);
+                    });
+
+                    markers.push(marker);
+
+                    const listItem = document.createElement("li");
+                    listItem.innerHTML = `<strong>${place.name}</strong><br>${place.vicinity}`;
+                    placesList.appendChild(listItem);
+                });
+            }
+
+            const form = document.getElementById("cep-form");
+            const errorMessage = document.getElementById("error-message");
+
+            form.addEventListener("submit", async (event) => {
+                event.preventDefault();
+                const cep = document.getElementById("cep").value;
+                const radius = parseInt(document.getElementById("distance").value, 10);
+                errorMessage.textContent = "";
+
+                try {
+                    const coordinates = await getCoordinatesFromCEP(cep);
+
+                    if (coordinates) {
+                        map.setCenter(coordinates);
+
+                        const request = {
+                            location: new google.maps.LatLng(coordinates.lat, coordinates.lng),
+                            radius: radius,
+                            keyword: "reciclagem de eletrônicos",
+                        };
+
+                        service.nearbySearch(request, (results, status) => {
+                            if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+                                addMarkers(results);
+                            } else {
+                                errorMessage.textContent = "Nenhum ponto de reciclagem de eletrônicos encontrado próximo ao CEP informado.";
+                            }
+                        });
+                    }
+                } catch (error) {
+                    errorMessage.textContent = error.message;
+                }
+            });
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyUsyC8niOyGtErvz5zZNQ8EjcMJ5ZsoA&libraries=places&callback=initMap" async defer></script>
+</body>
+</html>
