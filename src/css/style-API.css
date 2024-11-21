@@ -1,0 +1,119 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3CB371;
+    padding: 10px 20px;
+}
+
+/* Estilização do logo */
+.navbar .logo {
+    height: 40px;
+}
+
+/* Links de navegação */
+.navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-links .nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-links .nav-link.active {
+    background-color: white;
+    color: #3CB371;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar-links .nav-link:hover {
+    color: #d4f1d4;
+}
+
+/* Botões de Login e Cadastro */
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-buttons .login-btn {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-buttons .register-btn {
+    border: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+main {
+    flex: 1;
+}
+#map {
+    height: 500px;
+    width: 100%;
+    margin-top: 20px;
+}
+#form-container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+input, button {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    max-width: 400px;
+    font-size: 16px;
+}
+#places-report {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+#places-report ul {
+    list-style-type: none;
+    padding: 0;
+}
+#places-report li {
+    padding: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+#places-report li strong {
+    color: #333;
+}
+footer {
+    background-color: #3CB371;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+footer a img {
+    width: 40px;
+    margin: 0 10px;
+}
