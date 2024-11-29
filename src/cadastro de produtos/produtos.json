@@ -1,14 +1,15 @@
 {
   "produtos": [
     {
-      "id": 0,
+      "id": 1,
       "nome": "Galaxy S22",
       "ano": 2022,
       "camera": "108 MP",
       "bateria": "5000 mAh",
       "sistema_operacional": "Android",
       "armazenamento": "256 GB",
-      "marca": "Samsung"
+      "marca": "Samsung",
+      "imagem": "img/galaxy-s22.png"
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "bateria": "3200 mAh",
       "sistema_operacional": "iOS",
       "armazenamento": "128 GB",
-      "marca": "Apple"
+      "marca": "Apple",
+      "imagem": "img/iphone-14-pro.jpg"
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@
       "bateria": "4355 mAh",
       "sistema_operacional": "Android",
       "armazenamento": "128 GB",
-      "marca": "Google"
+      "marca": "Google",
+      "imagem": "img/pixel-7.jpg"
     }
   ]
 }
