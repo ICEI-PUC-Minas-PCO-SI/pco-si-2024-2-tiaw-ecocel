@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0; /* Remover padding */
+    margin: 0; /* Remover margem */
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html, body {
+    height: 100%; /* Garantir que a altura seja 100% */
+    background-color: #F5F5F5;
+    overflow-x: hidden; /* Impedir rolagem horizontal */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3CB371;
+    padding: 10px 20px;
+}
+
+/* Estilização do logo */
+.navbar .logo {
+    height: 40px;
+}
+
+/* Links de navegação */
+.navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-links .nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-links .nav-link.active {
+    background-color: white;
+    color: #3CB371;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar-links .nav-link:hover {
+    color: #d4f1d4;
+}
+
+/* Botões de Login e Cadastro */
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-buttons .login-btn {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-buttons .register-btn {
+    border: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+h2 {
+    color: #808080;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%; /* Preencher 100% da largura */
+    max-width: 500px; /* Limite de largura para telas maiores */
+    margin: 0 auto; /* Centralizar no meio */
+}
+
+.accordion {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.accordion-header span {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.accordion-body {
+    color: #444;
+    font-size: 14px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s;
+}
+
+.accordion-body.active {
+    height: 100%;
+    opacity: 1;
+    padding: 5px 0px;
+}
+
+.arrow {
+    transition: transform 0.2s linear;
+}
+
+.accordion:has(.active) .arrow {
+    transform: rotate(180deg);
+}
+
+footer {
+    background-color: #3CB371;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a img {
+    width: 70px;
+    margin: 0 10px;
+}
+
+#form-container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== Responsividade ===== */
+
+/* Tablets e telas médias (768px a 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navbar-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    #container {
+        width: 90%;
+    }
+
+    .accordion-header {
+        font-size: 1rem;
+    }
+}
+
+/* Telas pequenas e celulares (480px a 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar .logo {
+        height: 35px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .navbar-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #container {
+        width: 95%;
+    }
+}
+
+/* Celulares pequenos (menores que 480px) */
+@media (max-width: 480px) {
+    .navbar .logo {
+        height: 30px;
+    }
+
+    .navbar-links .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .accordion-header {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .accordion-body {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    footer a img {
+        width: 50px;
+    }
+}
