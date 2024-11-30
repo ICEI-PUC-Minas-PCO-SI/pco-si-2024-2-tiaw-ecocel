@@ -1,0 +1,12 @@
+{
+    "clientes": [
+      {
+        "nome": "gustavo",
+        "idade": 19,
+        "Profisao": "programador",
+        "orcamento": "1500",
+        "Marque as opções que você considera importantes em um celular": "desempenho",
+        "email": "gustavo@gmail.com",
+        "senha":"gugu1301"
+      }
+}
