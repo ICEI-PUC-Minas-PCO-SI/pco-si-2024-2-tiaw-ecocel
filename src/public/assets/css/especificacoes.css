@@ -1,0 +1,51 @@
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 50px;
+}
+
+.content img {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.specifications {
+    width: 100%;
+    max-width: 500px;
+}
+
+.specifications h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.spec-item label {
+    flex: 1;
+    font-weight: bold;
+}
+
+.spec-item .progress-bar {
+    flex: 4;
+    height: 15px;
+    background-color: #ddd;
+    border-radius: 7px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: #32a852;
+}
