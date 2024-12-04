@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: Please cite this software using these metadata.
-title: Coloque aqui o título do seu trabalho
+title: Ecocel
 authors:
   - family-names: Sobrenome do aluno 1
     given-names: Nome do aluno 1 
@@ -8,12 +8,8 @@ authors:
     given-names: Nome do aluno 2 
   - family-names: Sobrenome do aluno 3
     given-names: Nome do aluno 3 
-  - family-names: Sobrenome do aluno 4
-    given-names: Nome do aluno 4 
-  - family-names: Sobrenome do aluno 5
-    given-names: Nome do aluno 5 
-  - family-names: Sobrenome do aluno 6
-    given-names: Nome do aluno 6 
+  - family-names: Lana da Rocha
+    given-names: Samara 
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: Sobrenome do(a) professor(a)
@@ -21,9 +17,9 @@ authors:
   - name-suffix: Professora
     affiliation: PUC Minas    
 keywords:
-    - coloque aqui a palavra-chave 1
-    - coloque aqui a palavra-chave 2
-    - coloque aqui a palavra-chave 3
+    - Celulares
+    - Sustentabiidade
+    - Economia
 repository-code: coloque o link do seu repositório
 license: CC-BY-4.0
 version: 1.0.0
