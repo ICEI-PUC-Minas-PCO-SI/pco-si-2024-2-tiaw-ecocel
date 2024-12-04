@@ -8,7 +8,6 @@
     <!--Google fonts icons-->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite" />
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dispositivos.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b024200ba3.js" crossorigin="anonymous"></script>
@@ -50,6 +49,67 @@
         </header>
 
         <!-- Filtros -->
+        <aside class="filter-container">
+            <h2>Filtrar por:</h2>
+            <form id="filterForm">
+                <div class="filter-item">
+                    <label for="marca">Marca:</label>
+                    <select id="marca" name="marca">
+                        <option value="">Selecione</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="Apple">Apple</option>
+                        <option value="Xiaomi">Xiaomi</option>
+                        <option value="Motorola">Motorola</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="durabilidade">Durabilidade:</label>
+                    <div id="durabilidade" class="rating" data-rating="0">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+
+                <div class="filter-item">
+                    <label for="camera">Câmera:</label>
+                    <div id="camera" class="rating" data-rating="0">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+
+                <div class="filter-item">
+                    <label for="bateria">Bateria:</label>
+                    <div id="bateria" class="rating" data-rating="0">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+
+                <div class="filter-item">
+                    <label for="preco">Faixa de Preço:</label>
+                    <input type="range" id="preco" name="preco" min="0" max="10000" step="500" value="0" oninput="this.nextElementSibling.value = this.value">
+                    <output>0</output>
+                </div>
+
+                <div class="filter-item">
+                    <label for="favoritos">Favoritos:</label>
+                    <input type="checkbox" id="favoritos" name="favoritos">
+                </div>
+
+                <button type="button" onclick="filtrar()">Filtrar</button>
+            </form>
+        </aside>
 
         <!-- Cards de produtos -->
         <container class="products-container" id="products-container"></container>

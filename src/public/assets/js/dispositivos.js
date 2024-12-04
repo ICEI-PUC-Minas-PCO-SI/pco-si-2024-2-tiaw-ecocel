@@ -23,7 +23,7 @@ function searchProducts() {
     let newCadastro = [];
 
     for (let i = 0; i < cadastro.length; i++) {
-        // Pega a marca e modelo do celular e coloca tudo minusculo para comparar com o valor buscado, que também esta em minusculo
+        // Pega a marca e modelo do cadastro e coloca tudo minusculo para comparar com o valor buscado, que também esta em minusculo
         let nome = cadastro[i].marca + " " + cadastro[i].modelo;
         nome = nome.toLowerCase();
 
@@ -100,4 +100,74 @@ function updateLocalStorage() {
     });
     localStorage.setItem('favoritos', JSON.stringify(favoritos));
 };
+
+// Filtro de pesquisa
+function setupRatingSystem() {
+    const ratings = document.querySelectorAll('.rating');
+
+    ratings.forEach(rating => {
+        rating.addEventListener('click', function (event) {
+            const value = event.target.getAttribute('data-value');
+            setRating(rating, value);
+        });
+    });
+}
+
+function setRating(ratingElement, value) {
+    const stars = ratingElement.querySelectorAll('.star');
+    ratingElement.setAttribute('data-rating', value);
+
+    stars.forEach(star => {
+        if (star.getAttribute('data-value') <= value) {
+            star.classList.add('active');
+        } else {
+            star.classList.remove('active');
+        }
+    });
+}
+
+function filtrar() {
+    const marca = document.getElementById('marca').value;
+    const durabilidade = parseInt(document.querySelector('#durabilidade').getAttribute('data-rating'));
+    const camera = parseInt(document.querySelector('#camera').getAttribute('data-rating'));
+    const bateria = parseInt(document.querySelector('#bateria').getAttribute('data-rating'));
+    const preco = parseInt(document.getElementById('preco').value);
+    const favoritos = document.getElementById('favoritos').checked;
+
+    const resultados = cadastro.filter(cadastro => {
+        return (
+            (!marca || cadastro.marca === marca) &&
+            (!durabilidade || cadastro.durabilidade >= durabilidade) &&
+            (!camera || cadastro.camera >= camera) &&
+            (!bateria || cadastro.bateria >= bateria) &&
+            (!preco || (cadastro.precoMin <= preco && cadastro.precoMax >= preco)) &&
+            (!favoritos || cadastro.favorito)
+        );
+    });
+
+    exibirResultados(resultados);
+}
+
+function exibirResultados(resultados) {
+    const lista = document.querySelector('.product-list');
+    lista.innerHTML = ''; 
+
+    resultados.forEach(cadastro => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `
+            <img src="${cadastro.imagem}" alt="${cadastro.marca} ${cadastro.modelo}" class="product-image">
+            <h3>${cadastro.marca} - ${cadastro.modelo}</h3>
+            <p>Durabilidade: ${cadastro.durabilidade} estrelas</p>
+            <p>Câmera: ${cadastro.camera} estrelas</p>
+            <p>Preço: R$${cadastro.precoMin} - R$${cadastro.precoMax}</p>
+            <p>Bateria: ${cadastro.bateria} estrelas</p>
+        `;
+        lista.appendChild(card);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    setupRatingSystem();
+});
 
