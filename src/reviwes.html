@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrosel reviwes</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Estilos para o rodapé */
+    /* Estilização do logo */
+    .navbar .logo {
+     height: 40px;
+    }
+  
+    footer {
+      background-color: #28a745;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    /* Ajuste do tamanho do carousel */
+    #customCarousel {
+      max-width: 600px;
+      margin: 20px auto; /* Centraliza o carousel */
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      position: relative; /* Para posicionar as setas fora */
+    }
+
+    /* Estilo para os itens do carousel */
+    .carousel-item {
+      padding: 20px;
+    }
+
+    .carousel-item h5 {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .carousel-item p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Setas fora do quadrado */
+    .carousel-control-prev,
+    .carousel-control-next {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border-radius: 50%;
+      z-index: 10; /* Coloca as setas acima do carousel */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color:black;
+      border-radius: 25%;
+    }
+
+    /* Estilo para as setas fora do box (ao lado do carousel) */
+    .carousel-control-prev {
+      left: -60px; /* Posiciona a seta à esquerda fora da caixa */
+    }
+
+    .carousel-control-next {
+      right: -60px; /* Posiciona a seta à direita fora da caixa */
+    }
+   
+  </style>
+</head>
+<body>
+  <!-- Navbar ou Cabeçalho -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #28a745;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Dispositivos</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Sustentabilidade</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+          <li class="nav-item"><a class="btn btn-dark" href="#">Cadastro</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Carousel Customizado -->
+  <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <h5>Avaliação 1</h5>
+        <p>Ótimo serviço, muito satisfeita com o atendimento e os produtos!</p>
+        <div class="d-flex align-items-center">
+          <img src="avatar1.png" alt="Avatar 1" class="rounded-circle me-2" width="50" height="50">
+          <div>
+            <strong>Maria Silva</strong><br>
+            <span>15/09/2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <h5>Avaliação 2</h5>
+        <p>Produtos incríveis e sustentáveis. Super recomendo!</p>
+        <div class="d-flex align-items-center">
+          <img src="avatar3.png" alt="Avatar 2" class="rounded-circle me-2" width="50" height="50">
+          <div>
+            <strong>João Pedro</strong><br>
+            <span>12/10/2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <h5>Avaliação 3</h5>
+        <p>Empresa muito comprometida com a sustentabilidade. Adorei!</p>
+        <div class="d-flex align-items-center">
+          <img src="avatar2.png" alt="Avatar 3" class="rounded-circle me-2" width="50" height="50">
+          <div>
+            <strong>Ana Costa</strong><br>
+            <span>10/11/2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Setas de navegação -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Ecocel - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
