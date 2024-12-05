@@ -35,8 +35,8 @@
                     <input type="number" class="form-control" id="productid" placeholder="ID do produto">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="productname">Nome</label>
-                    <input type="text" class="form-control" id="productname" placeholder="Nome do produto">
+                    <label for="productname">Modelo</label>
+                    <input type="text" class="form-control" id="productname" placeholder="Modelo do produto">
                 </div>
             </div>
             <div class="form-row">
@@ -52,10 +52,10 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="productbat">Bateria</label>
-                    <input type="text" class="form-control" id="productbat" placeholder="Durabilidade da bateria">
+                    <input type="text" class="form-control" id="productbat" placeholder="Capacidade da bateria">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="productso">Sistema operacional:</label>
+                    <label for="productso">Sistema Operacional</label>
                     <select class="form-control" id="productso">
                         <option>Android</option>
                         <option>iOS</option>
@@ -65,7 +65,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="productarm">Armazenamento</label>
-                    <input type="text" class="form-control" id="productarm" placeholder="Armazenamento do produto">
+                    <input type="text" class="form-control" id="productarm" placeholder="Capacidade de armazenamento">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="productmark">Marca</label>
@@ -79,7 +79,7 @@
             <button type="button" class="btn btn-dark" id="cadastrar">Cadastrar</button>
         </form>
     </div>
-
+    
     <!-- Tabela de Produtos -->
     <div class="container mt-5">
         <h2>Produtos Cadastrados</h2>
@@ -87,7 +87,7 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Nome</th>
+                    <th>Modelo</th>
                     <th>Ano</th>
                     <th>Câmera</th>
                     <th>Bateria</th>
@@ -100,30 +100,25 @@
             <tbody></tbody>
         </table>
     </div>
-
-    <!-- Rodapé -->
-    <footer class="footer mt-5" style="background-color: #3CB371;">
-        <div class="container py-3">
-            <a class="footer-brand" href="#"><img src="img/ig-removebg-preview.png" alt="Instagram"></a>
-            <a class="footer-brand" href="#"><img src="img/yt-removebg-preview.png" alt="Youtube"></a>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
+    
     <script>
         const LIMITE_PRODUTOS = 5;
         let produtos = [];
-
-        function carregarProdutos() {
-            const produtosSalvos = JSON.parse(localStorage.getItem('produtos'));
-            if (produtosSalvos) {
-                produtos = produtosSalvos;
+    
+        async function carregarProdutos() {
+            try {
+                const response = await fetch('db/db.json'); // Carrega o arquivo JSON
+                const data = await response.json();
+                produtos = data.produtos || []; // Assumindo que os produtos estão na chave "produtos"
+                exibirProdutos();
+            } catch (error) {
+                console.error('Erro ao carregar produtos do JSON:', error);
+                alert('Não foi possível carregar os produtos.');
             }
-            exibirProdutos();
         }
-
-        carregarProdutos();
-
+    
+        carregarProdutos(); // Chamada inicial para carregar produtos do JSON
+    
         function exibirProdutos() {
             const tabela = document.querySelector('#tabela-produtos tbody');
             tabela.innerHTML = '';
@@ -131,47 +126,47 @@
                 const linha = document.createElement('tr');
                 linha.innerHTML = `
                     <td>${produto.id}</td>
-                    <td>${produto.nome}</td>
+                    <td>${produto.modelo}</td>
                     <td>${produto.ano}</td>
                     <td>${produto.camera}</td>
                     <td>${produto.bateria}</td>
                     <td>${produto.sistema_operacional}</td>
                     <td>${produto.armazenamento}</td>
                     <td>${produto.marca}</td>
-                    <td><img src="${produto.imagem || 'img/default.png'}" alt="${produto.nome}" class="img-thumbnail" style="max-width: 100px;"></td>
+                    <td><img src="${produto.imagem || 'img/default.png'}" alt="${produto.modelo}" class="img-thumbnail" style="max-width: 100px;"></td>
                 `;
                 tabela.appendChild(linha);
             });
         }
-
+    
         document.getElementById('cadastrar').addEventListener('click', () => {
             const id = document.getElementById('productid').value;
-            const nome = document.getElementById('productname').value;
+            const modelo = document.getElementById('productname').value;
             const ano = document.getElementById('productano').value;
             const camera = document.getElementById('productcam').value;
             const bateria = document.getElementById('productbat').value;
             const sistema = document.getElementById('productso').value;
             const armazenamento = document.getElementById('productarm').value;
             const marca = document.getElementById('productmark').value;
-
-            if (!id || !nome || !ano || !camera || !bateria || !armazenamento || !marca) {
+    
+            if (!id || !modelo || !ano || !camera || !bateria || !armazenamento || !marca) {
                 alert('Por favor, preencha todos os campos.');
                 return;
             }
-
+    
             if (produtos.some(produto => produto.id === parseInt(id))) {
                 alert('ID já existe!');
                 return;
             }
-
+    
             const imagemInput = document.getElementById('productimg');
             const imagem = imagemInput.files[0]
                 ? URL.createObjectURL(imagemInput.files[0])
                 : 'img/default.png';
-
+    
             const novoProduto = {
                 id: parseInt(id),
-                nome,
+                modelo,
                 ano,
                 camera,
                 bateria,
@@ -180,17 +175,23 @@
                 marca,
                 imagem
             };
-
+    
             // Substituir produtos mais antigos ao atingir o limite
             if (produtos.length >= LIMITE_PRODUTOS) {
                 produtos.shift(); // Remove o mais antigo
             }
-
+    
             produtos.push(novoProduto);
-            localStorage.setItem('produtos', JSON.stringify(produtos));
             exibirProdutos();
             document.getElementById('form-produto').reset();
         });
     </script>
+    <footer class="footer mt-5" style="background-color: #3CB371;">
+        <div class="container py-3">
+            <a class="footer-brand" href="#"><img src="img/ig-removebg-preview.png" alt="Instagram"></a>
+            <a class="footer-brand" href="#"><img src="img/yt-removebg-preview.png" alt="Youtube"></a>
+        </div>
+    </footer>
+    
 </body>
 </html>
