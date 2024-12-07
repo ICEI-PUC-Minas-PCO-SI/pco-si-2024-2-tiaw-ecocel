@@ -139,12 +139,3 @@ function showUserInfo (element) {
 
 // Inicializa as estruturas utilizadas pelo LoginApp
 initLoginApp ();
-
-// Retorna o usuário logado
-function armazenarUsuarioLogado(usuario) {
-    const dadosUsuario = {
-        id: usuario.id
-    };
-
-    localStorage.setItem('usuarioLogado', JSON.stringify(dadosUsuario));
-}

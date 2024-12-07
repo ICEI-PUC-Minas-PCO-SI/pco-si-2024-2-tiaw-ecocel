@@ -52,7 +52,7 @@ body {
     display: none;
 }
 
-#nav-item-home, #nav-item-login{
+#nav-item-login{
     background-color: white;
     border-radius: 15%;
     border-color: black;
