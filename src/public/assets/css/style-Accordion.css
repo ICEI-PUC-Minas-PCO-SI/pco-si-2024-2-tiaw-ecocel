@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0; /* Remover padding */
+    margin: 0; /* Remover margem */
+}
+
+html, body {
+    height: 100%; /* Garantir que a altura seja 100% */
+    background-color: #F5F5F5;
+    overflow-x: hidden; /* Impedir rolagem horizontal */
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+#main-accordion {
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%; /* Preencher 100% da largura */
+    max-width: 500px; /* Limite de largura para telas maiores */
+    margin: 0 auto; /* Centralizar no meio */
+}
+
+.accordion {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.accordion-header span {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.accordion-body {
+    color: #444;
+    font-size: 14px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s;
+}
+
+.accordion-body.active {
+    height: 100%;
+    opacity: 1;
+    padding: 5px 0px;
+}
+
+.arrow {
+    transition: transform 0.2s linear;
+}
+
+.accordion:has(.active) .arrow {
+    transform: rotate(180deg);
+}
+
+#form-container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== Responsividade ===== */
+
+/* Tablets e telas médias (768px a 1024px) */
+@media (max-width: 1024px) {   
+    #container {
+        width: 90%;
+    }
+
+    .accordion-header {
+        font-size: 1rem;
+    }
+}
+
+/* Telas pequenas e celulares (480px a 768px) */
+@media (max-width: 768px) {
+    #container {
+        width: 95%;
+    }
+}
+
+/* Celulares pequenos (menores que 480px) */
+@media (max-width: 480px) {
+    .accordion-header {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .accordion-body {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}

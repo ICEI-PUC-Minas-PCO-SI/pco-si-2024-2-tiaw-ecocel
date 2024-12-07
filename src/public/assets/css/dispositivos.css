@@ -126,11 +126,23 @@ header {
     .products-container {
         grid-template-columns: repeat(3, 1fr);
     }
+    
 }
 
 @media (max-width: 767px) {
     .products-container {
         grid-template-columns: 1fr;
+    }
+    /*GRID*/
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "aside"
+            "products"
+            "footer";
+        grid-template-columns: 1fr; 
+        height: 100vh; 
     }
     .menu{
         display: block;
