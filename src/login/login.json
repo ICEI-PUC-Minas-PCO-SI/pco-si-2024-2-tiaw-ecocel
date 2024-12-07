@@ -1,0 +1,71 @@
+{
+    "produtos": [
+      {
+        "id": 1,
+        "nome": "Galaxy S22",
+        "ano": 2022,
+        "camera": "108 MP",
+        "bateria": "5000 mAh",
+        "sistema_operacional": "Android",
+        "armazenamento": "256 GB",
+        "marca": "Samsung",
+        "imagem": "img/galaxy-s22.png"
+      },
+      {
+        "id": 2,
+        "nome": "iPhone 14 Pro",
+        "ano": 2023,
+        "camera": "48 MP",
+        "bateria": "3200 mAh",
+        "sistema_operacional": "iOS",
+        "armazenamento": "128 GB",
+        "marca": "Apple",
+        "imagem": "img/iphone-14-pro.jpg"
+      },
+      {
+        "id": 3,
+        "nome": "Pixel 7",
+        "ano": 2022,
+        "camera": "50 MP",
+        "bateria": "4355 mAh",
+        "sistema_operacional": "Android",
+        "armazenamento": "128 GB",
+        "marca": "Google",
+        "imagem": "img/pixel-7.jpg"
+      }
+    ],
+    "clientes": [
+      {
+        "nome": "gustavo",
+        "idade": 19,
+        "Profisao": "programador",
+        "orcamento": "1500",
+        "Marque as opções que você considera importantes em um celular": "desempenho",
+        "email": "gustavo@gmail.com",
+        "senha": "gugu1301"
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Maria Silva",
+        "image": "https://i.pravatar.cc/80?img=10",
+        "stars": 5,
+        "comment": "Ótimo serviço, muito satisfeita com o atendimento e os produtos!",
+        "date": "2023-09-15"
+      },
+      {
+        "name": "João Pedro",
+        "image": "https://i.pravatar.cc/80?img=12",
+        "stars": 4,
+        "comment": "Produtos incríveis e sustentáveis. Super recomendo!",
+        "date": "2023-10-12"
+      },
+      {
+        "name": "Ana Costa",
+        "image": "https://i.pravatar.cc/80?img=14",
+        "stars": 5,
+        "comment": "Superou minhas expectativas, adorei!",
+        "date": "2023-11-10"
+      }
+    ]
+  }
