@@ -1,36 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+'<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fale Conosco</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Contato - Fale Conosco</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3CB371;">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="logo2.png" alt="Logo" width="50" height="auto">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Dispositivos</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Sustentabilidade</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Contato</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-dark btn-sm ms-2" href="#">Login</a></li>
-                    <li class="nav-item"><a class="btn btn-dark btn-sm ms-2" href="#">Cadastro</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+    <container class="grid-container">
+    <header class="header" id="header"></header>
+    <!-- script para preencher o header -->
+    <script src="header.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
     <!-- Main Content -->
     <main class="container my-4">
         <!-- Contact Info -->
@@ -43,7 +27,6 @@
                 <li><i class="bi bi-telephone"></i> + 55 (31) 999999999</li>
             </ul>
         </section>
-
         <!-- Contact Form -->
         <section>
             <h2 class="h5">Ou preencha o formulário de contato abaixo que te responderemos por email:</h2>
@@ -73,20 +56,15 @@
             </form>
         </section>
     </main>
-    <footer class="bg-light py-3">
-        <div class="container">
-            <div class="d-flex justify-content-start">
-                <!-- Ícones alinhados à esquerda -->
-                <a href="#" class="me-3 text-dark"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="me-3 text-dark"><i class="bi bi-youtube"></i></a>
-                <a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
-            </div>
-        </div>
-    </footer>    
-
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>
+    <footer class="footer" id="footer"></footer>
+    <!-- script para preencher o footer -->
+    <script src="footer.js"></script>
+    </container>
 </body>
 </html>
