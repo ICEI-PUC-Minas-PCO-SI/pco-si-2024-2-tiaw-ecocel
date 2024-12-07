@@ -1,22 +1,10 @@
-const cadastro = data[0].produtos;
+let produtos;
 
-// teste requisição do json
 fetch("http://localhost:3000/produtos")
     .then(response => response.json())
-    .then(data => {
-        console.log(data)
-    })
-    .catch(error => {
-        console.error('Erro ao ler produtos via API JSONServer:', error);
-        displayMessage("Erro ao ler produtos");
-    });
-
-//Chama as funções para carregar os cards na pagina
-loadFavoritos();
-fetch("http://localhost:3000/produtos")
-    .then(response => response.json())
-    .then(data => {
-        loadCards(data)
+    .then(async data => {
+        await loadCards(data)
+        produtos = data
     })
     .catch(error => {
         console.error('Erro ao ler produtos via API JSONServer:', error);
@@ -36,16 +24,8 @@ searchBar.addEventListener('keydown', function (event) {
 });
 
 // Retorna os produtos de acordo com o que foi digitado na barra de pesquisa
-function searchProducts(){
-    fetch("http://localhost:3000/produtos")
-    .then(response => response.json())
-    .then(data => {
-        auxSearchProducts(data)
-    })
-    .catch(error => {
-        console.error('Erro ao ler produtos via API JSONServer:', error);
-        displayMessage("Erro ao ler produtos");
-    });
+function searchProducts() {
+    auxSearchProducts(produtos)
 }
 
 function auxSearchProducts(celulares) {
@@ -77,7 +57,7 @@ function auxSearchProducts(celulares) {
 };
 
 // Cria os card com os dados do json
-function loadCards(products) {
+async function loadCards(products) {
     const gridContainer = document.getElementById('products-container');
     const saibaMaisLink = "especificacoes.html";
 
@@ -110,28 +90,47 @@ function loadCards(products) {
 
             favButton.style.color = item.favorito ? 'red' : 'black';
 
-            updateLocalStorage();
+            const usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+            if (usuarioCorrenteJSON) {
+                const usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+                fetch("http://localhost:3000/usuarios/" + usuarioCorrente.id, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ favoritos: products.filter(p => p.favorito).map(p => p.id) })
+                })
+                    .then(response => response.json())
+            } else {
+                window.location.href = LOGIN_URL;
+            }
         });
     });
+
+    await loadFavoritos(products)
 };
 
 // Função para carregar os estados de favorito do localStorage
-function loadFavoritos() {
-    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || {};
-    cadastro.forEach(item => {
-        if (favoritos[item.id]) {
-            item.favorito = true;
-        };
-    });
-};
+function loadFavoritos(products) {
+    const usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+    if (usuarioCorrenteJSON) {
+        const usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+        return fetch("http://localhost:3000/usuarios/" + usuarioCorrente.id, {
+            method: 'GET',
+        })
+            .then(response => response.json())
+            .then(response => {
+                products.forEach(item => {
+                    if (response.favoritos.includes(item.id)) {
+                        item.favorito = true;
+                        const favButton = document.getElementById(`fav-${item.id}`)
+                        favButton.style.color = item.favorito ? 'red' : 'black';
+                    };
+                });
+            })
+    }
 
-// Função para atualizar o localStorage quando um item é marcado como favorito
-function updateLocalStorage() {
-    const favoritos = {};
-    cadastro.forEach(item => {
-        favoritos[item.id] = item.favorito;
-    });
-    localStorage.setItem('favoritos', JSON.stringify(favoritos));
+    return Promise.resolve()
 };
 
 // Filtro de pesquisa
@@ -163,16 +162,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setupRatingSystem();
 });
 
-function filtrar(){
-    fetch("http://localhost:3000/produtos")
-    .then(response => response.json())
-    .then(data => {
-        auxFiltrar(data)
-    })
-    .catch(error => {
-        console.error('Erro ao ler produtos via API JSONServer:', error);
-        displayMessage("Erro ao ler produtos");
-    });
+function filtrar() {
+    auxFiltrar(produtos)
 }
 
 function auxFiltrar(dadosCelulares) {
@@ -198,7 +189,7 @@ function auxFiltrar(dadosCelulares) {
         );
     });
 
-    if(resultados.length != 0){
+    if (resultados.length != 0) {
         loadCards(resultados);
     } else {
         document.getElementById("products-container").innerHTML = `<p><strong>
@@ -225,13 +216,13 @@ fetch("http://localhost:3000/produtos")
     });
 
 
-function filtroMarca(dadosCelulares){
+function filtroMarca(dadosCelulares) {
     const select_marca = document.getElementById("marca");
     let uniqueMarca = [];
 
-    for(let i=0; i<dadosCelulares.length; i++){
+    for (let i = 0; i < dadosCelulares.length; i++) {
         let marca = dadosCelulares[i].marca;
-        if(uniqueMarca.indexOf(marca)==-1 && marca!= ""){
+        if (uniqueMarca.indexOf(marca) == -1 && marca != "") {
             let newOption = document.createElement("option");
             newOption.classList.add("marca-option");
             newOption.value = marca;
@@ -243,15 +234,15 @@ function filtroMarca(dadosCelulares){
     }
 }
 
-function filtroCamera(dadosCelulares){
+function filtroCamera(dadosCelulares) {
     const select_camera = document.getElementById("camera");
     let uniquecamera = [];
 
-    for(let i=0; i<dadosCelulares.length; i++){
+    for (let i = 0; i < dadosCelulares.length; i++) {
         let camera = dadosCelulares[i].camera;
         console.log(camera)
 
-        if(uniquecamera.indexOf(camera)==-1  && camera!= ""){
+        if (uniquecamera.indexOf(camera) == -1 && camera != "") {
             let newOption = document.createElement("option");
             newOption.classList.add("camera-option");
             newOption.value = camera;
@@ -263,13 +254,13 @@ function filtroCamera(dadosCelulares){
     }
 }
 
-function filtroBateria(dadosCelulares){
+function filtroBateria(dadosCelulares) {
     const select_bateria = document.getElementById("bateria");
     let uniquebateria = [];
 
-    for(let i=0; i<dadosCelulares.length; i++){
+    for (let i = 0; i < dadosCelulares.length; i++) {
         let bateria = dadosCelulares[i].bateria;
-        if(uniquebateria.indexOf(bateria)==-1  && bateria!= ""){
+        if (uniquebateria.indexOf(bateria) == -1 && bateria != "") {
             let newOption = document.createElement("option");
             newOption.classList.add("bateria-option");
             newOption.value = bateria;
@@ -281,13 +272,13 @@ function filtroBateria(dadosCelulares){
     }
 }
 
-function filtroSistema_operacional(dadosCelulares){
+function filtroSistema_operacional(dadosCelulares) {
     const select_sistema_operacional = document.getElementById("sistema_operacional");
     let uniquesistema_operacional = [];
 
-    for(let i=0; i<dadosCelulares.length; i++){
+    for (let i = 0; i < dadosCelulares.length; i++) {
         let sistema_operacional = dadosCelulares[i].sistema_operacional;
-        if(uniquesistema_operacional.indexOf(sistema_operacional)==-1  && sistema_operacional!= ""){
+        if (uniquesistema_operacional.indexOf(sistema_operacional) == -1 && sistema_operacional != "") {
             let newOption = document.createElement("option");
             newOption.classList.add("sistema_operacional-option");
             newOption.value = sistema_operacional;
@@ -299,13 +290,13 @@ function filtroSistema_operacional(dadosCelulares){
     }
 }
 
-function filtroArmazenamento(dadosCelulares){
+function filtroArmazenamento(dadosCelulares) {
     const select_armazenamento = document.getElementById("armazenamento");
     let uniquearmazenamento = [];
 
-    for(let i=0; i<dadosCelulares.length; i++){
+    for (let i = 0; i < dadosCelulares.length; i++) {
         let armazenamento = dadosCelulares[i].armazenamento;
-        if(uniquearmazenamento.indexOf(armazenamento)==-1 && armazenamento!= ""){
+        if (uniquearmazenamento.indexOf(armazenamento) == -1 && armazenamento != "") {
             let newOption = document.createElement("option");
             newOption.classList.add("armazenamento-option");
             newOption.value = armazenamento;

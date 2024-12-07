@@ -86,6 +86,9 @@ function loginUser (login, senha) {
             // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
             sessionStorage.setItem ('usuarioCorrente', JSON.stringify (usuarioCorrente));
 
+            // Armazena o usuario no Local Storage
+            armazenarUsuarioLogado(usuarioCorrente);
+
             // Retorna true para usuário encontrado
             return true;
         }
@@ -136,3 +139,12 @@ function showUserInfo (element) {
 
 // Inicializa as estruturas utilizadas pelo LoginApp
 initLoginApp ();
+
+// Retorna o usuário logado
+function armazenarUsuarioLogado(usuario) {
+    const dadosUsuario = {
+        id: usuario.id
+    };
+
+    localStorage.setItem('usuarioLogado', JSON.stringify(dadosUsuario));
+}

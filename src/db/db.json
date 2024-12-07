@@ -10,8 +10,7 @@
       "armazenamento": "256 GB",
       "marca": "Samsung",
       "preco": 2300,
-      "imagem": "./assets/images/S22.jpg",
-      "favorito": false
+      "imagem": "./assets/images/S22.jpg"
     },
     {
       "id": 2,
@@ -23,8 +22,7 @@
       "armazenamento": "128 GB",
       "marca": "Apple",
       "preco": 4500,
-      "imagem": "./assets/images/iphone-14-pro.jpg",
-      "favorito": false
+      "imagem": "./assets/images/iphone-14-pro.jpg"
     },
     {
       "id": 3,
@@ -36,8 +34,7 @@
       "armazenamento": "128 GB",
       "marca": "Google",
       "preco": 4300,
-      "imagem": "./assets/images/google-pixel-7.jpg",
-      "favorito": false
+      "imagem": "./assets/images/google-pixel-7.jpg"
     },
     {
       "id": 4,
@@ -49,10 +46,9 @@
       "armazenamento": "256 GB",
       "marca": "Samsung",
       "preco": 1200,
-      "imagem": "./assets/images/img1.png",
-      "favorito": false
-  },
-  {
+      "imagem": "./assets/images/img1.png"
+    },
+    {
       "id": 5,
       "modelo": "Moto G 52",
       "ano": 2022,
@@ -62,9 +58,8 @@
       "armazenamento": "128 GB",
       "marca": "Motorola",
       "preco": 1500,
-      "imagem": "./assets/images/img3.png",
-      "favorito": false
-  }
+      "imagem": "./assets/images/img3.png"
+    }
   ],
   "usuarios": [
     {
@@ -83,7 +78,11 @@
       "senha": "gugu1301",
       "nome": "samara lana",
       "email": "samara@gmail.com",
-      "id": 2
+      "id": 2,
+      "favoritos": [
+        3,
+        4
+      ]
     },
     {
       "login": "samara",
@@ -120,4 +119,3 @@
     }
   ]
 }
-  
