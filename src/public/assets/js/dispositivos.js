@@ -1,27 +1,27 @@
 const cadastro = data[0].produtos;
-console.log(cadastro)
-
 
 // teste requisição do json
-/*fetch('db/db.JSON').then(res => res.json())
-.then(json => { console.log(json)
-})
-
-async function carregarProdutos() {
-    try {
-        const response = await fetch('db/db.json'); // Carrega o arquivo JSON
-        const data = await response.json();
-        produtos = data.produtos || []; // Assumindo que os produtos estão na chave "produtos"
-    } catch (error) {
-        console.error('Erro ao carregar produtos do JSON:', error);
-    }
-}
-
-carregarProdutos(); // Chamada inicial para carregar produtos do JSON*/
+fetch("http://localhost:3000/produtos")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+    })
+    .catch(error => {
+        console.error('Erro ao ler produtos via API JSONServer:', error);
+        displayMessage("Erro ao ler produtos");
+    });
 
 //Chama as funções para carregar os cards na pagina
 loadFavoritos();
-loadCards(cadastro);
+fetch("http://localhost:3000/produtos")
+    .then(response => response.json())
+    .then(data => {
+        loadCards(data)
+    })
+    .catch(error => {
+        console.error('Erro ao ler produtos via API JSONServer:', error);
+        displayMessage("Erro ao ler produtos");
+    });
 
 // Ativando a busca ao clicar no botao
 const btnSearch = document.getElementById("search-btn");
@@ -36,25 +36,37 @@ searchBar.addEventListener('keydown', function (event) {
 });
 
 // Retorna os produtos de acordo com o que foi digitado na barra de pesquisa
-function searchProducts() {
+function searchProducts(){
+    fetch("http://localhost:3000/produtos")
+    .then(response => response.json())
+    .then(data => {
+        auxSearchProducts(data)
+    })
+    .catch(error => {
+        console.error('Erro ao ler produtos via API JSONServer:', error);
+        displayMessage("Erro ao ler produtos");
+    });
+}
+
+function auxSearchProducts(celulares) {
 
     let valorBusca = searchBar.value;
     valorBusca = valorBusca.toLowerCase();
     document.getElementById("products-container").innerHTML = "";
-    let newCadastro = [];
+    let newCelulares = [];
 
-    for (let i = 0; i < cadastro.length; i++) {
-        // Pega a marca e modelo do cadastro e coloca tudo minusculo para comparar com o valor buscado, que também esta em minusculo
-        let nome = cadastro[i].marca + " " + cadastro[i].modelo;
+    for (let i = 0; i < celulares.length; i++) {
+        // Pega a marca e modelo do celulares e coloca tudo minusculo para comparar com o valor buscado, que também esta em minusculo
+        let nome = celulares[i].marca + " " + celulares[i].modelo;
         nome = nome.toLowerCase();
 
         if (nome.indexOf(valorBusca) != -1) {
-            newCadastro.push(cadastro[i]);
+            newCelulares.push(celulares[i]);
         };
     };
 
-    if (newCadastro.length != 0) {
-        loadCards(newCadastro);
+    if (newCelulares.length != 0) {
+        loadCards(newCelulares);
     } else {
         document.getElementById("products-container").innerHTML = `<p><strong>
                                                                         <span>Oops...</span>
@@ -147,7 +159,23 @@ function setRating(ratingElement, value) {
     });
 }
 
-function filtrar() {
+document.addEventListener('DOMContentLoaded', () => {
+    setupRatingSystem();
+});
+
+function filtrar(){
+    fetch("http://localhost:3000/produtos")
+    .then(response => response.json())
+    .then(data => {
+        auxFiltrar(data)
+    })
+    .catch(error => {
+        console.error('Erro ao ler produtos via API JSONServer:', error);
+        displayMessage("Erro ao ler produtos");
+    });
+}
+
+function auxFiltrar(dadosCelulares) {
     document.getElementById("products-container").innerHTML = "";
 
     const marca = document.getElementById('marca').value;
@@ -158,7 +186,7 @@ function filtrar() {
     const sistema_operacional = document.getElementById('sistema_operacional').value;
     const favoritos = document.getElementById('favoritos').checked;
 
-    const resultados = cadastro.filter(celular => {
+    const resultados = dadosCelulares.filter(celular => {
         return (
             (!marca || celular.marca.toLowerCase() == marca.toLowerCase()) &&
             (!camera || celular.camera == camera) &&
@@ -169,7 +197,6 @@ function filtrar() {
             (!favoritos || celular.favorito == true)
         );
     });
-    console.log(resultados)
 
     if(resultados.length != 0){
         loadCards(resultados);
@@ -182,23 +209,28 @@ function filtrar() {
     };
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    setupRatingSystem();
-});
-
 // Preenche as opções de filtro
-filtroMarca()
-filtroBateria()
-filtroCamera()
-filtroSistema_operacional()
-filtroArmazenamento()
+fetch("http://localhost:3000/produtos")
+    .then(response => response.json())
+    .then(data => {
+        filtroMarca(data)
+        filtroBateria(data)
+        filtroCamera(data)
+        filtroSistema_operacional(data)
+        filtroArmazenamento(data)
+    })
+    .catch(error => {
+        console.error('Erro ao ler produtos via API JSONServer:', error);
+        displayMessage("Erro ao ler produtos");
+    });
 
-function filtroMarca(){
+
+function filtroMarca(dadosCelulares){
     const select_marca = document.getElementById("marca");
     let uniqueMarca = [];
 
-    for(let i=0; i<cadastro.length; i++){
-        let marca = cadastro[i].marca;
+    for(let i=0; i<dadosCelulares.length; i++){
+        let marca = dadosCelulares[i].marca;
         if(uniqueMarca.indexOf(marca)==-1 && marca!= ""){
             let newOption = document.createElement("option");
             newOption.classList.add("marca-option");
@@ -211,12 +243,14 @@ function filtroMarca(){
     }
 }
 
-function filtroCamera(){
+function filtroCamera(dadosCelulares){
     const select_camera = document.getElementById("camera");
     let uniquecamera = [];
 
-    for(let i=0; i<cadastro.length; i++){
-        let camera = cadastro[i].camera;
+    for(let i=0; i<dadosCelulares.length; i++){
+        let camera = dadosCelulares[i].camera;
+        console.log(camera)
+
         if(uniquecamera.indexOf(camera)==-1  && camera!= ""){
             let newOption = document.createElement("option");
             newOption.classList.add("camera-option");
@@ -229,12 +263,12 @@ function filtroCamera(){
     }
 }
 
-function filtroBateria(){
+function filtroBateria(dadosCelulares){
     const select_bateria = document.getElementById("bateria");
     let uniquebateria = [];
 
-    for(let i=0; i<cadastro.length; i++){
-        let bateria = cadastro[i].bateria;
+    for(let i=0; i<dadosCelulares.length; i++){
+        let bateria = dadosCelulares[i].bateria;
         if(uniquebateria.indexOf(bateria)==-1  && bateria!= ""){
             let newOption = document.createElement("option");
             newOption.classList.add("bateria-option");
@@ -247,12 +281,12 @@ function filtroBateria(){
     }
 }
 
-function filtroSistema_operacional(){
+function filtroSistema_operacional(dadosCelulares){
     const select_sistema_operacional = document.getElementById("sistema_operacional");
     let uniquesistema_operacional = [];
 
-    for(let i=0; i<cadastro.length; i++){
-        let sistema_operacional = cadastro[i].sistema_operacional;
+    for(let i=0; i<dadosCelulares.length; i++){
+        let sistema_operacional = dadosCelulares[i].sistema_operacional;
         if(uniquesistema_operacional.indexOf(sistema_operacional)==-1  && sistema_operacional!= ""){
             let newOption = document.createElement("option");
             newOption.classList.add("sistema_operacional-option");
@@ -265,12 +299,12 @@ function filtroSistema_operacional(){
     }
 }
 
-function filtroArmazenamento(){
+function filtroArmazenamento(dadosCelulares){
     const select_armazenamento = document.getElementById("armazenamento");
     let uniquearmazenamento = [];
 
-    for(let i=0; i<cadastro.length; i++){
-        let armazenamento = cadastro[i].armazenamento;
+    for(let i=0; i<dadosCelulares.length; i++){
+        let armazenamento = dadosCelulares[i].armazenamento;
         if(uniquearmazenamento.indexOf(armazenamento)==-1 && armazenamento!= ""){
             let newOption = document.createElement("option");
             newOption.classList.add("armazenamento-option");

@@ -1,26 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-
 <body>
     <container class="grid-container">
     <header class="header" id="header"></header>
     <!-- script para preencher o header -->
-    <script src="assets/js/header.js"></script>
+    <script src="header.js"></script>
+    <body>
+      <div class="header-section">
+        <img src="./assets/images/logo2.png" alt="Logo da Ecocel" class="logo">
+        <p class="description">Desenvolver uma plataforma online que ajude os consumidores a escolher celulares de forma consciente, priorizando durabilidade, sustentabilidade e redução do desperdício eletrônico.</p>
+    </div>
+    
+        </div>
+      
+        <div class="reviews-carousel">
+  <style>
+    /* Estilos para o rodapé */
+    /* Estilização do logo */
+    .navbar .logo {
+     height: 40px;
+    }
+  
+    footer {
+      background-color: #28a745;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+    }
 
-    <!-- Conteudo da pagina -->
+    /* Ajuste do tamanho do carousel */
+    #customCarousel {
+      max-width: 600px;
+      margin: 20px auto; /* Centraliza o carousel */
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      position: relative; /* Para posicionar as setas fora */
+    }
 
+    /* Estilo para os itens do carousel */
+    .carousel-item {
+      padding: 20px;
+    }
+
+    .carousel-item h5 {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .carousel-item p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Setas fora do quadrado */
+    .carousel-control-prev,
+    .carousel-control-next {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border-radius: 50%;
+      z-index: 10; /* Coloca as setas acima do carousel */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color:black;
+      border-radius: 25%;
+    }
+
+    /* Estilo para as setas fora do box (ao lado do carousel) */
+    .carousel-control-prev {
+      left: -60px; /* Posiciona a seta à esquerda fora da caixa */
+    }
+
+    .carousel-control-next {
+      right: -60px; /* Posiciona a seta à direita fora da caixa */
+    }
+   
+  </style>
+</head>
+<body>
+  </nav>
+  <!-- Carousel Customizado -->
+  <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <h5>Avaliação 1</h5>
+        <p>Ótimo serviço, muito satisfeita com o atendimento e os produtos!</p>
+        <div class="d-flex align-items-center">
+          <img src="./assets/images/avatar1.png" alt="Avatar 1" class="rounded-circle me-2" width="50" height="50">
+          <div>
+            <strong>Maria Silva</strong><br>
+            <span>15/09/2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <h5>Avaliação 2</h5>
+        <p>Produtos incríveis e sustentáveis. Super recomendo!</p>
+        <div class="d-flex align-items-center">
+          <img src="./assets/images/avatar3.png" alt="Avatar 2" class="rounded-circle me-2" width="50" height="50">
+          <div>
+            <strong>João Pedro</strong><br>
+            <span>12/10/2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <h5>Avaliação 3</h5>
+        <p>Empresa muito comprometida com a sustentabilidade. Adorei!</p>
+        <div class="d-flex align-items-center">
+          <img src="./assets/images/avatar2.png" alt="Avatar 3" class="rounded-circle me-2" width="50" height="50">
+          <div>
+            <strong>Ana Costa</strong><br>
+            <span>10/11/2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Setas de navegação -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <footer class="footer" id="footer"></footer>
     <!-- script para preencher o footer -->
-    <script src="assets/js/footer.js"></script>
-    
+    <script src="footer.js"></script>
     </container>
 </body>
-
 </html>
