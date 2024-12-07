@@ -327,12 +327,17 @@ header {
     color: gold;
 }
 
-.filtered-results, .other-products {
-    flex: 1;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.filtroBtn {
+    background-color: #3CB371;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    width: 50%;
+}
+
+.filter-item select{
+    color: grey;
+    border-color: whitesmoke;
 }
 
 @media (max-width: 768px) {

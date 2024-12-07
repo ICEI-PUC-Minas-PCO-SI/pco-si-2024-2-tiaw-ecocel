@@ -3,5 +3,5 @@ document.getElementById('footer').innerHTML = /* html */`
         height="25px" width="25px"></a>
 <a href="https://www.instagram.com/" target="_blank"><img src="assets/images/instagram.png" alt="Instagram"
         height="25px" width="25px"></a>
-<span>Copyright 2024 - Samara Lana</span>
+<span>Copyright 2024 - Ecocel</span>
 `;

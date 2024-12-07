@@ -1,3 +1,24 @@
+const cadastro = data[0].produtos;
+console.log(cadastro)
+
+
+// teste requisição do json
+/*fetch('db/db.JSON').then(res => res.json())
+.then(json => { console.log(json)
+})
+
+async function carregarProdutos() {
+    try {
+        const response = await fetch('db/db.json'); // Carrega o arquivo JSON
+        const data = await response.json();
+        produtos = data.produtos || []; // Assumindo que os produtos estão na chave "produtos"
+    } catch (error) {
+        console.error('Erro ao carregar produtos do JSON:', error);
+    }
+}
+
+carregarProdutos(); // Chamada inicial para carregar produtos do JSON*/
+
 //Chama as funções para carregar os cards na pagina
 loadFavoritos();
 loadCards(cadastro);
@@ -35,11 +56,11 @@ function searchProducts() {
     if (newCadastro.length != 0) {
         loadCards(newCadastro);
     } else {
-        document.getElementById("products-container").innerHTML = `<p>
+        document.getElementById("products-container").innerHTML = `<p><strong>
                                                                         <span>Oops...</span>
                                                                         <br>
                                                                         <span>Nenhum produto encontrado.</span>
-                                                                    </p>`
+                                                                    </strong></p>`
     };
 };
 
@@ -54,7 +75,7 @@ function loadCards(products) {
 
         // Define o conteúdo do card com as informações do JSON
         card.innerHTML = `
-          <img src="${item.img}" alt="${item.marca + " " + item.modelo}" />
+          <img src="${item.imagem}" alt="${item.marca + " " + item.modelo}" />
           <div class="product-card__description">
             <div class="product-card__text">${item.marca + " " + item.modelo}</div>
             <div class="product-card__price"><strong>R$${item.preco}</strong></div>
@@ -127,47 +148,137 @@ function setRating(ratingElement, value) {
 }
 
 function filtrar() {
+    document.getElementById("products-container").innerHTML = "";
+
     const marca = document.getElementById('marca').value;
-    const durabilidade = parseInt(document.querySelector('#durabilidade').getAttribute('data-rating'));
-    const camera = parseInt(document.querySelector('#camera').getAttribute('data-rating'));
-    const bateria = parseInt(document.querySelector('#bateria').getAttribute('data-rating'));
+    const camera = document.getElementById('camera').value;
+    const bateria = document.getElementById('bateria').value;
     const preco = parseInt(document.getElementById('preco').value);
+    const armazenamento = document.getElementById('armazenamento').value;
+    const sistema_operacional = document.getElementById('sistema_operacional').value;
     const favoritos = document.getElementById('favoritos').checked;
 
-    const resultados = cadastro.filter(cadastro => {
+    const resultados = cadastro.filter(celular => {
         return (
-            (!marca || cadastro.marca === marca) &&
-            (!durabilidade || cadastro.durabilidade >= durabilidade) &&
-            (!camera || cadastro.camera >= camera) &&
-            (!bateria || cadastro.bateria >= bateria) &&
-            (!preco || (cadastro.precoMin <= preco && cadastro.precoMax >= preco)) &&
-            (!favoritos || cadastro.favorito)
+            (!marca || celular.marca.toLowerCase() == marca.toLowerCase()) &&
+            (!camera || celular.camera == camera) &&
+            (!bateria || celular.bateria == bateria) &&
+            (!preco || celular.preco <= preco) &&
+            (!armazenamento || celular.armazenamento <= armazenamento) &&
+            (!sistema_operacional || celular.sistema_operacional <= sistema_operacional) &&
+            (!favoritos || celular.favorito == true)
         );
     });
+    console.log(resultados)
 
-    exibirResultados(resultados);
-}
-
-function exibirResultados(resultados) {
-    const lista = document.querySelector('.product-list');
-    lista.innerHTML = ''; 
-
-    resultados.forEach(cadastro => {
-        const card = document.createElement('div');
-        card.classList.add('card');
-        card.innerHTML = `
-            <img src="${cadastro.imagem}" alt="${cadastro.marca} ${cadastro.modelo}" class="product-image">
-            <h3>${cadastro.marca} - ${cadastro.modelo}</h3>
-            <p>Durabilidade: ${cadastro.durabilidade} estrelas</p>
-            <p>Câmera: ${cadastro.camera} estrelas</p>
-            <p>Preço: R$${cadastro.precoMin} - R$${cadastro.precoMax}</p>
-            <p>Bateria: ${cadastro.bateria} estrelas</p>
-        `;
-        lista.appendChild(card);
-    });
+    if(resultados.length != 0){
+        loadCards(resultados);
+    } else {
+        document.getElementById("products-container").innerHTML = `<p><strong>
+                                                                        <span>Oops...</span>
+                                                                        <br>
+                                                                        <span>Nenhum produto encontrado.</span>
+                                                                    </strong></p>`
+    };
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     setupRatingSystem();
 });
 
+// Preenche as opções de filtro
+filtroMarca()
+filtroBateria()
+filtroCamera()
+filtroSistema_operacional()
+filtroArmazenamento()
+
+function filtroMarca(){
+    const select_marca = document.getElementById("marca");
+    let uniqueMarca = [];
+
+    for(let i=0; i<cadastro.length; i++){
+        let marca = cadastro[i].marca;
+        if(uniqueMarca.indexOf(marca)==-1 && marca!= ""){
+            let newOption = document.createElement("option");
+            newOption.classList.add("marca-option");
+            newOption.value = marca;
+            newOption.innerText = marca;
+
+            select_marca.appendChild(newOption);
+            uniqueMarca.push(marca);
+        }
+    }
+}
+
+function filtroCamera(){
+    const select_camera = document.getElementById("camera");
+    let uniquecamera = [];
+
+    for(let i=0; i<cadastro.length; i++){
+        let camera = cadastro[i].camera;
+        if(uniquecamera.indexOf(camera)==-1  && camera!= ""){
+            let newOption = document.createElement("option");
+            newOption.classList.add("camera-option");
+            newOption.value = camera;
+            newOption.innerText = camera;
+
+            select_camera.appendChild(newOption);
+            uniquecamera.push(camera);
+        }
+    }
+}
+
+function filtroBateria(){
+    const select_bateria = document.getElementById("bateria");
+    let uniquebateria = [];
+
+    for(let i=0; i<cadastro.length; i++){
+        let bateria = cadastro[i].bateria;
+        if(uniquebateria.indexOf(bateria)==-1  && bateria!= ""){
+            let newOption = document.createElement("option");
+            newOption.classList.add("bateria-option");
+            newOption.value = bateria;
+            newOption.innerText = bateria;
+
+            select_bateria.appendChild(newOption);
+            uniquebateria.push(bateria);
+        }
+    }
+}
+
+function filtroSistema_operacional(){
+    const select_sistema_operacional = document.getElementById("sistema_operacional");
+    let uniquesistema_operacional = [];
+
+    for(let i=0; i<cadastro.length; i++){
+        let sistema_operacional = cadastro[i].sistema_operacional;
+        if(uniquesistema_operacional.indexOf(sistema_operacional)==-1  && sistema_operacional!= ""){
+            let newOption = document.createElement("option");
+            newOption.classList.add("sistema_operacional-option");
+            newOption.value = sistema_operacional;
+            newOption.innerText = sistema_operacional;
+
+            select_sistema_operacional.appendChild(newOption);
+            uniquesistema_operacional.push(sistema_operacional);
+        }
+    }
+}
+
+function filtroArmazenamento(){
+    const select_armazenamento = document.getElementById("armazenamento");
+    let uniquearmazenamento = [];
+
+    for(let i=0; i<cadastro.length; i++){
+        let armazenamento = cadastro[i].armazenamento;
+        if(uniquearmazenamento.indexOf(armazenamento)==-1 && armazenamento!= ""){
+            let newOption = document.createElement("option");
+            newOption.classList.add("armazenamento-option");
+            newOption.value = armazenamento;
+            newOption.innerText = armazenamento;
+
+            select_armazenamento.appendChild(newOption);
+            uniquearmazenamento.push(armazenamento);
+        }
+    }
+}

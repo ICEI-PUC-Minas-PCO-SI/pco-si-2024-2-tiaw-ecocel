@@ -56,44 +56,35 @@
                     <label for="marca">Marca:</label>
                     <select id="marca" name="marca">
                         <option value="">Selecione</option>
-                        <option value="Samsung">Samsung</option>
-                        <option value="Apple">Apple</option>
-                        <option value="Xiaomi">Xiaomi</option>
-                        <option value="Motorola">Motorola</option>
                     </select>
                 </div>
 
                 <div class="filter-item">
-                    <label for="durabilidade">Durabilidade:</label>
-                    <div id="durabilidade" class="rating" data-rating="0">
-                        <span class="star" data-value="1">★</span>
-                        <span class="star" data-value="2">★</span>
-                        <span class="star" data-value="3">★</span>
-                        <span class="star" data-value="4">★</span>
-                        <span class="star" data-value="5">★</span>
-                    </div>
-                </div>
-
-                <div class="filter-item">
-                    <label for="camera">Câmera:</label>
-                    <div id="camera" class="rating" data-rating="0">
-                        <span class="star" data-value="1">★</span>
-                        <span class="star" data-value="2">★</span>
-                        <span class="star" data-value="3">★</span>
-                        <span class="star" data-value="4">★</span>
-                        <span class="star" data-value="5">★</span>
-                    </div>
+                    <label for="camera">Camera:</label>
+                    <select id="camera" name="camera">
+                        <option value="">Selecione</option>
+                    </select>
                 </div>
 
                 <div class="filter-item">
                     <label for="bateria">Bateria:</label>
-                    <div id="bateria" class="rating" data-rating="0">
-                        <span class="star" data-value="1">★</span>
-                        <span class="star" data-value="2">★</span>
-                        <span class="star" data-value="3">★</span>
-                        <span class="star" data-value="4">★</span>
-                        <span class="star" data-value="5">★</span>
-                    </div>
+                    <select id="bateria" name="bateria">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="sistema_operacional">Sistema Operacional:</label>
+                    <select id="sistema_operacional" name="sistema_operacional">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="armazenamento">Armazenamento:</label>
+                    <select id="armazenamento" name="armazenamento">
+                        <option value="">Selecione</option>
+                    </select>
                 </div>
 
                 <div class="filter-item">
@@ -107,7 +98,7 @@
                     <input type="checkbox" id="favoritos" name="favoritos">
                 </div>
 
-                <button type="button" onclick="filtrar()">Filtrar</button>
+                <button class="filtroBtn" type="button" onclick="filtrar()">Filtrar</button>
             </form>
         </aside>
 
