@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispositivos</title>
+    <!--Google fonts icons-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite" />
+    <link rel="stylesheet" href="assets/css/dispositivos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b024200ba3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <container class="container">
+        <header>
+            <!-- Logo -->
+            <a href="home.html"><img src="assets/images/logo.jpeg" alt="logo" height="50px" width="50px"></a>
+
+            <!-- Menu mobile -->
+            <nav class="nav">
+                <input type="checkbox" id="checkbox" class="checkbox">
+                <label for="checkbox" class=label-menu>
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </label>
+
+                <!-- Links do menu-->
+                <ul class="menu">
+                    <li><a id="nav-item-home" href="home.html">Home</a></li>
+                    <li><a href="dispositivos.html">Dispositivos</a></li>
+                    <li><a href="cadastroprodutos.html">Cadastro de produto</a></li>
+                    <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <br>
+        <h3>Produtos sugeridos para você</h3>
+
+        <!-- Cards de produtos -->
+        <container class="products-container registro-sucesso" id="products-container"></container>
+
+        <footer class="footer" id="footer"></footer>
+        <script src="assets/js/footer.js"></script>
+    </container>
+
+    <script src="assets/js/cadastro.js"></script>
+    <script src="assets/js/cadastrosucesso.js"></script>
+
+</body>
+
+</html>

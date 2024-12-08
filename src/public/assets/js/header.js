@@ -1,3 +1,23 @@
+const LOGIN_URL = "/modulos/login/login.html";
+
+// Apaga os dados do usuário corrente no sessionStorage
+function logoutUser() {
+    sessionStorage.removeItem('usuarioCorrente');
+    window.location = LOGIN_URL;
+}
+
+const usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+let loginEl
+if (usuarioCorrenteJSON) {
+    const usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+    loginEl = `${usuarioCorrente.nome} (${usuarioCorrente.login}) 
+                    <a onclick="logoutUser()">❌</a>`;
+} else {
+    loginEl = `<li><a id="nav-item-login" href="login.html">Login</a></li>
+                <li><a id="nav-item-cadastro" href="/cadastrocliente.html">Cadastro</a></li>`
+}
+
+
 document.getElementById('header').innerHTML = /* html */`
     <!--Google fonts icons-->
     <link rel="stylesheet" href="assets\css\dispositivos.css">
@@ -23,12 +43,8 @@ document.getElementById('header').innerHTML = /* html */`
             <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
             <li><a href="contato.html">Contato</a></li>
             <li><a href="reviews.html">Reviews</a></li>
-            <li><a id="nav-item-login" href="login.html">Login</a></li>
-            <li><a id="nav-item-cadastro" href="cadastro.html">Cadastro</a></li>
+            ${loginEl}
         </ul>
     </nav>
     <script src="https://kit.fontawesome.com/b024200ba3.js" crossorigin="anonymous"></script>
 `;
-
-
-

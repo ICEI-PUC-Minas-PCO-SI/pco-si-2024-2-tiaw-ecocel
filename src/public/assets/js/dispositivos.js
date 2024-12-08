@@ -8,7 +8,6 @@ fetch("http://localhost:3000/produtos")
     })
     .catch(error => {
         console.error('Erro ao ler produtos via API JSONServer:', error);
-        displayMessage("Erro ao ler produtos");
     });
 
 // Ativando a busca ao clicar no botao
@@ -212,7 +211,6 @@ fetch("http://localhost:3000/produtos")
     })
     .catch(error => {
         console.error('Erro ao ler produtos via API JSONServer:', error);
-        displayMessage("Erro ao ler produtos");
     });
 
 
