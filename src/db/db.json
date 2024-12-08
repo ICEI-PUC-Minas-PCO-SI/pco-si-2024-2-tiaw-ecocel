@@ -182,7 +182,10 @@
       "email": "samara22@gmail.com",
       "senha": "samara22",
       "termos": true,
-      "id": 11
+      "id": 11,
+      "favoritos": [
+        2
+      ]
     }
   ],
   "reviews": [

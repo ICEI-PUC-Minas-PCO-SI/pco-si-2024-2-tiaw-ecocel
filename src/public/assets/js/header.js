@@ -1,4 +1,4 @@
-const LOGIN_URL = "/modulos/login/login.html";
+var LOGIN_URL = "/modulos/login/login.html";
 
 // Apaga os dados do usuário corrente no sessionStorage
 function logoutUser() {

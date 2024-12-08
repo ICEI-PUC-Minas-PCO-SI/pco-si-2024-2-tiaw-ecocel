@@ -11,7 +11,7 @@
 
 
 // Página inicial de Login
-const LOGIN_URL = "/modulos/login/login.html";
+var LOGIN_URL = "/modulos/login/login.html";
 let RETURN_URL = "/modulos/login/index.html";
 const API_URL = '/usuarios';
 
