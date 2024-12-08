@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reviews.css">
+</head>
+
+<body>
+    <main class="grid-container">
+        <header class="header" id="header"></header>
+        <!-- script para preencher o header -->
+        <script src="assets/js/header.js"></script>
+        <section class="feedback-form">
+            <h1>O que achou da Ecocel? Deixe seu comentário no formulário abaixo, sua opinião é muito importante pra
+                gente :)</h1>
+            <form id="reviewForm">
+                <label for="name">Nome</label>
+                <input type="text" id="name" placeholder="Insira seu nome" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Insira seu email" required>
+
+                <label for="title">Título</label>
+                <input type="text" id="title" placeholder="Insira o título do comentário">
+
+                <label for="rating">Nota</label>
+                <div class="stars" id="rating">
+                    <span data-value="1">★</span>
+                    <span data-value="2">★</span>
+                    <span data-value="3">★</span>
+                    <span data-value="4">★</span>
+                    <span data-value="5">★</span>
+                </div>
+
+                <label for="message">Mensagem</label>
+                <textarea id="message" placeholder="Escreva sua mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <footer class="footer" id="footer"></footer>
+        <!-- script para preencher o footer -->
+        <script src="assets/js/footer.js"></script>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const feedbackForm = {
+                "title": "O que achou da Ecocel? Deixe seu comentário no formulário abaixo, sua opinião é muito importante pra gente :)",
+                "fields": [
+                    {
+                        "label": "Nome",
+                        "type": "text",
+                        "placeholder": "Insira seu nome",
+                        "id": "name",
+                        "required": true
+                    },
+                    {
+                        "label": "Email",
+                        "type": "email",
+                        "placeholder": "Insira seu email",
+                        "id": "email",
+                        "required": true
+                    },
+                    {
+                        "label": "Título",
+                        "type": "text",
+                        "placeholder": "Insira o título do comentário",
+                        "id": "title",
+                        "required": false
+                    },
+                    {
+                        "label": "Nota",
+                        "type": "rating",
+                        "options": [
+                            { "value": 1, "label": "1 estrela" },
+                            { "value": 2, "label": "2 estrelas" },
+                            { "value": 3, "label": "3 estrelas" },
+                            { "value": 4, "label": "4 estrelas" },
+                            { "value": 5, "label": "5 estrelas" }
+                        ],
+                        "id": "rating",
+                        "required": true
+                    },
+                    {
+                        "label": "Mensagem",
+                        "type": "textarea",
+                        "placeholder": "Escreva sua mensagem",
+                        "id": "message",
+                        "required": true
+                    }
+                ],
+                "submitButton": {
+                    "label": "Enviar",
+                    "action": "submitFeedback"
+                }
+            };
+
+            const stars = document.querySelectorAll("#rating span");
+
+            stars.forEach((star, index) => {
+                star.addEventListener("click", () => {
+
+                    stars.forEach(s => s.classList.remove("selected"));
+
+
+                    for (let i = 0; i <= index; i++) {
+                        stars[i].classList.add("selected");
+                    }
+                });
+            });
+
+            const form = document.getElementById("reviewForm");
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                alert("Review enviado! Obrigado pelo seu feedback.");
+                form.reset();
+                stars.forEach(star => star.classList.remove("selected"));
+            });
+        });
+
+    </script>
+
+    <style>
+        main, body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 2em;
+        }
+
+        .header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .nav .btn-login,
+        .nav .btn-signup {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .feedback-form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .feedback-form h1 {
+            font-size: 1.2em;
+        }
+
+        .feedback-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .feedback-form input,
+        .feedback-form textarea,
+        .feedback-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .feedback-form .stars span {
+            cursor: pointer;
+            font-size: 1.5em;
+            color: gray;
+        }
+
+        .feedback-form .stars span.selected {
+            color: gold;
+        }
+
+        .reviews {
+            margin-top: 20px;
+        }
+
+        .reviews .review {
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .reviewer {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .reviewer img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            .nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .feedback-form {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .feedback-form h1 {
+                font-size: 1.1rem;
+            }
+
+            .feedback-form button {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: column;
+            }
+
+            .feedback-form h1 {
+                font-size: 1rem;
+            }
+
+            .feedback-form input,
+            .feedback-form textarea {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</body>
+
+</html>

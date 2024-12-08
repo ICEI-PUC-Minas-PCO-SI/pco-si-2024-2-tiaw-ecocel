@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <main class="grid-container">
+        <header class="header" id="header"></header>
+        <!-- script para preencher o header -->
+        <script src="header.js"></script>
+        <div class="container mt-5">
+            <h2>Cadastro</h2>
+            <form onsubmit="return salvaLogin(event)">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="login">Login</label>
+                        <input type="text" class="form-control" id="login" placeholder="Digite seu login">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="idade">Idade</label>
+                        <input type="number" class="form-control" id="idade" placeholder="Digite sua idade">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="profissao">Profissão</label>
+                        <input type="text" class="form-control" id="profissao" placeholder="Digite sua profissão">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="orcamento">Orçamento</label>
+                        <input type="number" class="form-control" id="orcamento" placeholder="Digite seu orçamento">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferencias">Marque as opções que você considera importantes em um celular:</label>
+                    <select class="form-control" id="preferencias">
+                        <option>Desempenho</option>
+                        <option>Câmera</option>
+                        <option>Bateria</option>
+                        <option>Preço</option>
+                        <option>Tela</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="senha">Senha</label>
+                        <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="confirmarSenha">Confirmar senha</label>
+                        <input type="password" class="form-control" id="confirmarSenha"
+                            placeholder="Confirme sua senha">
+                    </div>
+                </div>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="termos">
+                    <label class="form-check-label" for="termos">Eu li e aceito os <a href="#">termos e
+                            condições</a></label>
+                </div>
+
+                <button type="submit" class="btn btn-dark">Cadastrar</button>
+            </form>
+        </div>
+        <footer class="footer" id="footer"></footer>
+        <!-- script para preencher o footer -->
+        <script src="footer.js"></script>
+        <script src="/assets/js/login.js"></script>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+
+        function salvaLogin(event) {
+            // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+            event.preventDefault();
+
+            // Obtem os dados do formulário
+            let nome = document.getElementById('nome').value;
+            let login = document.getElementById('login').value;
+            let idade = document.getElementById('idade').value;
+            let profissao = document.getElementById('profissao').value;
+            let orcamento = document.getElementById('orcamento').value;
+            let preferencias = document.getElementById('preferencias').value;
+            let email = document.getElementById('email').value;
+            let senha = document.getElementById('senha').value;
+            let confirmarSenha = document.getElementById('confirmarSenha').value;
+            let termos = document.getElementById('termos').checked;
+
+            if (senha.length < 6) {
+                alert("Senha muito fraca.")
+                return;
+            }
+
+            if (senha !== confirmarSenha) {
+                alert('As senhas informadas não conferem.');
+                return
+            }
+
+            if (!termos) {
+                alert("Você precisa aceitar os termos.")
+                return;
+            }
+
+            // Adiciona o usuário no banco de dados
+            addUser({
+                login,
+                nome,
+                idade,
+                profissao,
+                orcamento,
+                preferencias,
+                email,
+                senha,
+                termos,
+                favoritos: []
+            }).then(() => {
+                alert('Usuário cadastrado com sucesso.');
+                location.href = "cadastroclientesucesso.html"
+            })
+        }
+    </script>
+</body>
+
+</html>

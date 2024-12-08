@@ -1,0 +1,99 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Formulário e Mapa */
+#form-container {
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#form-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#form-container input,
+#form-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#form-container button {
+    background-color: #3CB371;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#form-container button:hover {
+    background-color: #2d8c5c;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Relatório de Pontos */
+#places-report {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#places-report ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#places-report li {
+    padding: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
+#places-report li strong {
+    color: #333;
+}
+
+/* ===== Responsividade ===== */
+
+/* Tablets (768px a 1024px) */
+@media (max-width: 1024px) {
+    #form-container h1 {
+        font-size: 1.5rem;
+    }
+
+    #map {
+        height: 300px;
+    }
+
+    #places-report {
+        padding: 0 10px;
+    }
+}
+
+/* Celulares pequenos (menores que 480px) */
+@media (max-width: 480px) {
+    #form-container input,
+    #form-container button {
+        font-size: 0.9rem;
+    }
+}

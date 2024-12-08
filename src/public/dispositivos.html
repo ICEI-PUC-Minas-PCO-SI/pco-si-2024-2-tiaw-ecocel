@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispositivos</title>
+    <!--Google fonts icons-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite" />
+    <link rel="stylesheet" href="assets/css/dispositivos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b024200ba3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <container class="grid-container">
+        <header>
+            <!-- Logo -->
+            <a href="home.html"><img src="assets/images/logo.jpeg" alt="logo" height="50px" width="50px"></a>
+            
+            <!-- Barra de pesquisa -->
+            <div class="search-bar">
+                <input type="text" id="nav-search-bar" placeholder="Pesquisar..." />
+                <button type="button" id="search-btn">
+                    <span class="material-icons">search</span>
+                </button>
+            </div>
+
+            <!-- Menu mobile -->
+            <nav class="nav">
+                <input type="checkbox" id="checkbox" class="checkbox">
+                <label for="checkbox" class=label-menu>
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </label>
+
+                <!-- Links do menu-->
+                <ul class="menu">
+                    <li><a id="nav-item-home" href="home.html">Home</a></li>
+                    <li><a href="dispositivos.html">Dispositivos</a></li>
+                    <li><a href="cadastroprodutos.html">Cadastro de produto</a></li>
+                    <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a id="nav-item-login" href="/modulos/login/login.html">Login</a></li>
+                    <li><a id="nav-item-cadastro" href="cadastrocliente.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Filtros -->
+        <aside class="filter-container">
+            <h2>Filtrar por:</h2>
+            <form id="filterForm">
+                <div class="filter-item">
+                    <label for="marca">Marca:</label>
+                    <select id="marca" name="marca">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="camera">Camera:</label>
+                    <select id="camera" name="camera">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="bateria">Bateria:</label>
+                    <select id="bateria" name="bateria">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="sistema_operacional">Sistema Operacional:</label>
+                    <select id="sistema_operacional" name="sistema_operacional">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="armazenamento">Armazenamento:</label>
+                    <select id="armazenamento" name="armazenamento">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="preco">Faixa de Preço:</label>
+                    <input type="range" id="preco" name="preco" min="0" max="10000" step="500" value="0" oninput="this.nextElementSibling.value = this.value">
+                    <output>0</output>
+                </div>
+
+                <div class="filter-item">
+                    <label for="favoritos">Favoritos:</label>
+                    <input type="checkbox" id="favoritos" name="favoritos">
+                </div>
+
+                <button class="filtroBtn" type="button" onclick="filtrar()">Filtrar</button>
+            </form>
+        </aside>
+
+        <!-- Cards de produtos -->
+        <container class="products-container" id="products-container"></container>
+        
+        <footer class="footer" id="footer"></footer>
+        <script src="assets/js/footer.js"></script>
+    </container>
+    <script src="assets/js/cadastro.js"></script>
+    <script src="assets/js/dispositivos.js"></script>
+
+</body>
+
+</html>
