@@ -38,11 +38,11 @@ document.getElementById('header').innerHTML = /* html */`
         <!-- Links do menu-->
         <ul class="menu">
             <li><a id="nav-item-home" href="home.html">Home</a></li>
-            <li><a href="dispositivos.html">Dispositivos</a></li>
+            <li><a href="/dispositivos.html">Dispositivos</a></li>
             <li><a href="cadastroprodutos.html">Cadastro de produto</a></li>
-            <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="/sustentabilidade.html">Sustentabilidade</a></li>
+            <li><a href="/contato.html">Contato</a></li>
+            <li><a href="/reviews.html">Reviews</a></li>
             ${loginEl}
         </ul>
     </nav>
