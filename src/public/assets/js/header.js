@@ -13,7 +13,7 @@ if (usuarioCorrenteJSON) {
     loginEl = `${usuarioCorrente.nome} (${usuarioCorrente.login}) 
                     <a onclick="logoutUser()">❌</a>`;
 } else {
-    loginEl = `<li><a id="nav-item-login" href="login.html">Login</a></li>
+    loginEl = `<li><a id="nav-item-login" href="/modulos/login/login.html">Login</a></li>
                 <li><a id="nav-item-cadastro" href="/cadastrocliente.html">Cadastro</a></li>`
 }
 

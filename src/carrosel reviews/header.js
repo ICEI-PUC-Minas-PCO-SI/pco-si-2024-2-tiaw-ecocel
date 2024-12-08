@@ -22,7 +22,7 @@ document.getElementById('header').innerHTML = /* html */`
             <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
             <li><a href="contato.html">Contato</a></li>
             <li><a href="reviews.html">Reviews</a></li>
-            <li><a id="nav-item-login" href="login.html">Login</a></li>
+            <li><a id="nav-item-login" href="/modulos/login/login.html">Login</a></li>
             <li><a id="nav-item-cadastro" href="cadastro.html">Cadastro</a></li>
         </ul>
     </nav>
