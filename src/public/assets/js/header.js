@@ -25,7 +25,7 @@ document.getElementById('header').innerHTML = /* html */`
     <script src="https://kit.fontawesome.com/b024200ba3.js" crossorigin="anonymous"></script>
 
     <!-- Logo -->
-    <a href="/index.html"><img src="/assets/images/logo.jpeg" alt="logo" height="50px" width="50px"></a>
+    <a href="/index.html"><img src="./assets/images/logo.jpeg" alt="logo" height="50px" width="50px"></a>
 
     <!-- Menu mobile -->
     <nav class="nav">
