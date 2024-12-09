@@ -24,13 +24,5 @@
 <img width="950" alt="image" src="https://github.com/user-attachments/assets/041214c9-55c5-401e-898d-490d89622770">
 <img width="573" alt="image" src="https://github.com/user-attachments/assets/6f4bfff9-e85a-43a9-8106-55cf7bbb09c1">
 
-
-> **Links úteis**:
-> - [Protótipos: baixa, média ou alta fidelidade?](https://medium.com/ladies-that-ux-br/prot%C3%B3tipos-baixa-m%C3%A9dia-ou-alta-fidelidade-71d897559135)
-> - [Protótipos vs wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
 ### Protótipo Interativo
 https://www.figma.com/proto/ZsqxIZWDPTXOhLyPAtohpG/Prototipo?m=dev&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&node-id=17-591&starting-point-node-id=17%3A591

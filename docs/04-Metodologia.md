@@ -15,16 +15,8 @@ A ferramenta adotada para controle de versão é o Git, com repositórios hosped
 
 ## Convenções de Branches
 *main: versão estável, testada e pronta para produção.
-*unstable: versão instável, mas funcional, para revisão.
-*testing: versão em fase de testes.
-*dev: branch dedicada ao desenvolvimento contínuo.
-
-## Gestão de Issues
-As issues são organizadas no GitHub Issues com as seguintes etiquetas:
-documentation: aprimoramento ou criação de documentação.
-bug: correções de problemas detectados.
-enhancement: melhorias em funcionalidades existentes.
-feature: introdução de novas funcionalidades.
+*nome do artefato: versões para entrega parcial de artefatos.
+*juntar-site: versão para juntar os artefatos antes de colocar na main.
 
 ## Processo de Versionamento
 Commits devem seguir o padrão de mensagens semânticas (ex.: feat: add new guide for recycling).
@@ -34,10 +26,10 @@ Planejamento do Projeto
 Divisão de Papéis
 O desenvolvimento segue os princípios do Scrum, com a equipe dividida em papéis específicos:
 
-Scrum Master: [Nome], responsável por facilitar o processo e remover impedimentos.
-Product Owner: [Nome], responsável por priorizar o backlog e representar os stakeholders.
-Equipe de Desenvolvimento: [Nomes], encarregados de implementar funcionalidades.
-Equipe de Design: [Nomes], responsáveis pela criação de interfaces visuais.
+Scrum Master: Samara, responsável por facilitar o processo e remover impedimentos.
+Product Owner: Cauã, responsável por priorizar o backlog e representar os stakeholders.
+Equipe de Desenvolvimento: João, Samara, Cauã e Gustavo, encarregados de implementar funcionalidades.
+Equipe de Design: Gustavo, responsáveis pela criação de interfaces visuais.
 Processo de Trabalho
 Etapa de Imersão: Uso do Design Thinking para entender o problema e os usuários (utilizando o Miro).
 Planejamento: Priorização do backlog no GitHub Projects, organizando tarefas em um quadro Kanban.
@@ -47,7 +39,7 @@ As ferramentas selecionadas oferecem eficiência e integração para o desenvolv
 
 ## Ferramenta	Finalidade	Justificativa
 Visual Studio Code	Editor de código	Popular por sua integração com extensões e suporte a múltiplas linguagens.
-Slack	Comunicação interna	Garantia de comunicação rápida e eficiente entre os membros.
+Grupo de Whatsapp Garantia de comunicação rápida e eficiente entre os membros.
 Figma	Design de interfaces	Ferramenta colaborativa com suporte para prototipagem interativa.
 Miro	Brainstorming e organização de ideias	Ideal para mapeamento de ideias e definições durante o Design Thinking.
 GitHub	Hospedagem e controle de versão	Integração com pipelines CI/CD e ferramenta robusta de gerenciamento de código.
