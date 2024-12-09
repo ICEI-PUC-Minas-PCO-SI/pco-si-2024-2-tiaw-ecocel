@@ -34,10 +34,10 @@ Planejamento do Projeto
 Divisão de Papéis
 O desenvolvimento segue os princípios do Scrum, com a equipe dividida em papéis específicos:
 
-Scrum Master: [Nome], responsável por facilitar o processo e remover impedimentos.
-Product Owner: [Nome], responsável por priorizar o backlog e representar os stakeholders.
-Equipe de Desenvolvimento: [Nomes], encarregados de implementar funcionalidades.
-Equipe de Design: [Nomes], responsáveis pela criação de interfaces visuais.
+Scrum Master: Samara, responsável por facilitar o processo e remover impedimentos.
+Product Owner: Cauã, responsável por priorizar o backlog e representar os stakeholders.
+Equipe de Desenvolvimento: João, Samara, Cauã e Gustavo, encarregados de implementar funcionalidades.
+Equipe de Design: Gustavo, responsáveis pela criação de interfaces visuais.
 Processo de Trabalho
 Etapa de Imersão: Uso do Design Thinking para entender o problema e os usuários (utilizando o Miro).
 Planejamento: Priorização do backlog no GitHub Projects, organizando tarefas em um quadro Kanban.
