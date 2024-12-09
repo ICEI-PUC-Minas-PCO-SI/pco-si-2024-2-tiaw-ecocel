@@ -15,16 +15,8 @@ A ferramenta adotada para controle de versão é o Git, com repositórios hosped
 
 ## Convenções de Branches
 *main: versão estável, testada e pronta para produção.
-*unstable: versão instável, mas funcional, para revisão.
-*testing: versão em fase de testes.
-*dev: branch dedicada ao desenvolvimento contínuo.
-
-## Gestão de Issues
-As issues são organizadas no GitHub Issues com as seguintes etiquetas:
-documentation: aprimoramento ou criação de documentação.
-bug: correções de problemas detectados.
-enhancement: melhorias em funcionalidades existentes.
-feature: introdução de novas funcionalidades.
+*nome do artefato: versões para entrega parcial de artefatos.
+*juntar-site: versão para juntar os artefatos antes de colocar na main.
 
 ## Processo de Versionamento
 Commits devem seguir o padrão de mensagens semânticas (ex.: feat: add new guide for recycling).
@@ -47,7 +39,7 @@ As ferramentas selecionadas oferecem eficiência e integração para o desenvolv
 
 ## Ferramenta	Finalidade	Justificativa
 Visual Studio Code	Editor de código	Popular por sua integração com extensões e suporte a múltiplas linguagens.
-Slack	Comunicação interna	Garantia de comunicação rápida e eficiente entre os membros.
+Grupo de Whatsapp Garantia de comunicação rápida e eficiente entre os membros.
 Figma	Design de interfaces	Ferramenta colaborativa com suporte para prototipagem interativa.
 Miro	Brainstorming e organização de ideias	Ideal para mapeamento de ideias e definições durante o Design Thinking.
 GitHub	Hospedagem e controle de versão	Integração com pipelines CI/CD e ferramenta robusta de gerenciamento de código.
