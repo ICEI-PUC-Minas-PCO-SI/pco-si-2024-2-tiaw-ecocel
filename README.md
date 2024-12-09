@@ -21,13 +21,14 @@ Temos como objetivo criar um site que facilite a escolha de um celular de forma 
 
 ## Instruções de utilização
 
-Acesse o site pela url: http://localhost:3000/index.html
+Acesse o site pela url: https://ecocel.replit.app/
+
 Depois rode os comandos a seguir no terminal do git bash:
 git clone https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2024-2-tiaw-ecocel.git
 npm install
 npm start
 
-Dessa forma o servidor do site iráfuncionar.
+Dessa forma o servidor do site irá funcionar.
 
 Use o login e senha a site como usuário teste:
 "login": "gustavo",
