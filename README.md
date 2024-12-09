@@ -21,13 +21,17 @@ Temos como objetivo criar um site que facilite a escolha de um celular de forma 
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Acesse o site pela url: 
+Depois rode os comandos a seguir no terminal do git bash:
+git clone https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2024-2-tiaw-ecocel.git
+npm install
+npm start
 
-Não deixe de informar o link onde a aplicação estará disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+Dessa forma o servidor do site iráfuncionar.
 
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
-
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+Use o login e senha a site como usuário teste:
+"login": "gustavo",
+"senha": "gugu1301"
 
 # Documentação
 
