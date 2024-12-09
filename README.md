@@ -46,7 +46,7 @@ O link e o usuário/senha descritos acima são apenas exemplos de como tais info
 
 # Código
 
-* <a href="https://ecocel.replit.app/">Código</a>
+* <a href="src/public">Código</a>
 
 # Apresentação
 
