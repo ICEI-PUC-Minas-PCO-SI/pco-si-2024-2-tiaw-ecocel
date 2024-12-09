@@ -21,7 +21,7 @@ Temos como objetivo criar um site que facilite a escolha de um celular de forma 
 
 ## Instruções de utilização
 
-Acesse o site pela url: 
+Acesse o site pela url: http://localhost:3000/index.html
 Depois rode os comandos a seguir no terminal do git bash:
 git clone https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2024-2-tiaw-ecocel.git
 npm install
