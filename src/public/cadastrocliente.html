@@ -91,7 +91,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-
+        // Produto padrão sugerido ao usuário
+        const id = 4;
+        
         function salvaLogin(event) {
             // Cancela a submissão do formulário para tratar sem fazer refresh da tela
             event.preventDefault();
@@ -123,6 +125,8 @@
                 return;
             }
 
+            let id = sugerirProduto(orcamento);
+
             // Adiciona o usuário no banco de dados
             addUser({
                 login,
@@ -137,7 +141,7 @@
                 favoritos: []
             }).then(() => {
                 alert('Usuário cadastrado com sucesso.');
-                location.href = "cadastroclientesucesso.html"
+                location.href = "cadastroclientesucesso.html?id="+id
             })
         }
     </script>
