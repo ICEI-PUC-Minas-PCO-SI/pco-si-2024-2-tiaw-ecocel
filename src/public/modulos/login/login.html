@@ -110,9 +110,11 @@
       // Obtem os dados de login e senha a partir do formulário de login
       var username = document.getElementById('username').value;
       var password = document.getElementById('password').value;
+      console.log("user: "+username+"senha: "+password)
 
       // Valida login e se estiver ok, redireciona para tela inicial da aplicação
       resultadoLogin = loginUser(username, password);
+      console.log(resultadoLogin)
       if (resultadoLogin) {
         window.location.href = RETURN_URL;
       }

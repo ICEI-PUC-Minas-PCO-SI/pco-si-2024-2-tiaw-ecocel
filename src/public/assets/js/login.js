@@ -75,6 +75,7 @@ function loginUser(login, senha) {
     // para localizar o usuário informado no formulario de login
     for (var i = 0; i < db_usuarios.length; i++) {
         var usuario = db_usuarios[i];
+        console.log("cada usuário: "+usuario)
 
         // Se encontrou login, carrega usuário corrente e salva no Session Storage
         if (login == usuario.login && senha == usuario.senha) {
