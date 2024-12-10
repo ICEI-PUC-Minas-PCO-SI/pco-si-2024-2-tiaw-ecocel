@@ -76,6 +76,21 @@
         3,
         4
       ]
+    },
+    {
+      "login": "samalana",
+      "nome": "samara lana",
+      "idade": "22",
+      "profissao": "Analista de op",
+      "orcamento": "2000",
+      "preferencias": "Desempenho",
+      "email": "samaralana@gmail.com",
+      "senha": "123456",
+      "termos": true,
+      "favoritos": [
+        2
+      ],
+      "id": 2
     }
   ],
   "reviews": [

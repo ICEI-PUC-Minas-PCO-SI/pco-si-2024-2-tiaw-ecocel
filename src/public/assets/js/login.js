@@ -14,7 +14,7 @@
 var LOGIN_URL = "/modulos/login/login.html";
 const REGISTRO_URL = "/cadastrocliente.html";
 let RETURN_URL = "/modulos/login/index.html";
-const API_URL = '/usuarios';
+const API_URL = 'http://localhost:3000/usuarios';
 
 // Objeto para o banco de dados de usuários baseado em JSON
 var db_usuarios = {};
