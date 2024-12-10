@@ -25,7 +25,7 @@ document.getElementById('header').innerHTML = /* html */`
     <script src="https://kit.fontawesome.com/b024200ba3.js" crossorigin="anonymous"></script>
 
     <!-- Logo -->
-    <a href="/index.html"><img src="./assets/images/logo.jpeg" alt="logo" height="50px" width="50px"></a>
+    <a href="/index.html"><img src="/assets/images/logo.jpeg" alt="logo" height="50px" width="50px"></a>
 
     <!-- Menu mobile -->
     <nav class="nav">
@@ -39,7 +39,7 @@ document.getElementById('header').innerHTML = /* html */`
         <ul class="menu">
             <li><a id="nav-item-home" href="/index.html">Home</a></li>
             <li><a href="/dispositivos.html">Dispositivos</a></li>
-            <li><a href="cadastroprodutos.html">Cadastro de produto</a></li>
+            <li><a href="/cadastroprodutos.html">Cadastro de produto</a></li>
             <li><a href="/sustentabilidade.html">Sustentabilidade</a></li>
             <li><a href="/contato.html">Contato</a></li>
             <li><a href="/reviews.html">Reviews</a></li>
