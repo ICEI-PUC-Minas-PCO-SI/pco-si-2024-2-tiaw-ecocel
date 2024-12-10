@@ -15,39 +15,10 @@
 
 <body>
     <container class="grid-container">
-        <header>
-            <!-- Logo -->
-            <a href="home.html"><img src="assets/images/logo.jpeg" alt="logo" height="50px" width="50px"></a>
-            
-            <!-- Barra de pesquisa -->
-            <div class="search-bar">
-                <input type="text" id="nav-search-bar" placeholder="Pesquisar..." />
-                <button type="button" id="search-btn">
-                    <span class="material-icons">search</span>
-                </button>
-            </div>
-
-            <!-- Menu mobile -->
-            <nav class="nav">
-                <input type="checkbox" id="checkbox" class="checkbox">
-                <label for="checkbox" class=label-menu>
-                    <i class="fa-solid fa-bars"></i>
-                    <i class="fa-solid fa-circle-xmark"></i>
-                </label>
-
-                <!-- Links do menu-->
-                <ul class="menu">
-                    <li><a id="nav-item-home" href="home.html">Home</a></li>
-                    <li><a href="/dispositivos.html">Dispositivos</a></li>
-                    <li><a href="cadastroprodutos.html">Cadastro de produto</a></li>
-                    <li><a href="/sustentabilidade.html">Sustentabilidade</a></li>
-                    <li><a href="/contato.html">Contato</a></li>
-                    <li><a href="/reviews.html">Reviews</a></li>
-                    <li><a id="nav-item-login" href="/modulos/login/login.html">Login</a></li>
-                    <li><a id="nav-item-cadastro" href="cadastrocliente.html">Cadastro</a></li>
-                </ul>
-            </nav>
+        <header id="header">
         </header>
+        <!-- script para preencher o header -->
+        <script src="assets/js/headerDispositivos.js"></script>
 
         <!-- Filtros -->
         <aside class="filter-container">
