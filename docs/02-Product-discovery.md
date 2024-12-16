@@ -71,3 +71,6 @@
 ![image](https://github.com/user-attachments/assets/8b1b9bab-6838-4c12-ad6f-7160ab7f3ad3)
 
 ![image](https://github.com/user-attachments/assets/4512b72d-70ee-4c86-94ab-91ed50e40430)
+
+Link de visualisação do miro, com todas as informações citasdas nessa página: https://miro.com/app/board/uXjVKoqwSkM=/
+
