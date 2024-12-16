@@ -14,7 +14,7 @@ Projeto de Interface - Figma
 A ferramenta adotada para controle de versão é o Git, com repositórios hospedados no GitHub. O fluxo de trabalho é baseado no GitFlow, assegurando uma estrutura clara para desenvolvimento e integração contínuos.
 
 ## Convenções de Branches
-*main: versão estável, testada e pronta para produção.
+*main*: versão estável, testada e pronta para produção.
 *nome do artefato: versões para entrega parcial de artefatos.
 *juntar-site: versão para juntar os artefatos antes de colocar na main.
 
