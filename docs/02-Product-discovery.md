@@ -5,7 +5,7 @@
 > ![image](https://github.com/user-attachments/assets/7eaee30c-2c83-4894-8093-49a17b1cf636)
 
 ### Entrevistas qualitativas
-#### Entrevista 1
+### Entrevista 1
   #### Qual sua idade? E qual sua renda mensal?
  35 anos, R$250.000,00
  #### Você se considera uma pessoa consumista?
@@ -23,7 +23,7 @@
  #### Se houvesse um site informativo sobre obsolescência programada, você acessaria? Que tipo de informação seria útil para você?
  Acessaria, sim. Seria útil obter insights sobre a durabilidade dos dispositivos e estratégias para otimizar o ciclo de vida dos produtos.
 
-#### Entrevista 2
+### Entrevista 2
   #### Qual sua idade? E qual sua renda mensal?
  23 anos, R$6000,00
  #### Você se considera uma pessoa consumista?
@@ -41,7 +41,7 @@
  #### Se houvesse um site informativo sobre obsolescência programada, você acessaria? Que tipo de informação seria útil para você?
  Sim, a informação mais útil seria as linhas de celular mais duráveis de cada marca.
 
-#### Entrevista 3 
+### Entrevista 3 
   #### Qual sua idade? E qual sua renda mensal?
  17 anos, R$500,00
  #### Você se considera uma pessoa consumista?
