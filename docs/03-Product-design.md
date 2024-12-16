@@ -45,7 +45,8 @@ Joel, estagiário e amante de videogames, tinha um grande sonho: viajar para Mac
 
 ## Requisitos
 
-As tabelas a seguir apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade dos requisitos, aplique uma técnica de priorização e detalhe como essa técnica foi aplicada.
+As tabelas a seguir apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
+O nível de prioridade foi feito com base em ALTA = essêncial para o site e BAIXA = é uma melhoria, mas não é essêncial 
 
 ### Requisitos funcionais
 
@@ -53,18 +54,23 @@ As tabelas a seguir apresentam os requisitos funcionais e não funcionais que de
 | ------ | ---------------------------------------------------------- | ---------- |
 | RF-001 | Cadastra os clientes | ALTA       |
 | RF-002 | Cadastra os produtos | ALTA     |
-| RF-003 | Insere os cards dos produtos | MÉDIA       |
-| RF-004 | Mostra as reviews em um corrossel  | MÉDIA       |
-| RF-005 | API que mostra a localização de postos de coleta de celulares para descarte | ALTA       |
+| RF-003 | Insere os cards dos produtos | ALTA       |
+| RF-004 | Mostra as reviews em um corrossel  | BAIXA       |
+| RF-005 | API que mostra a localização de postos de coleta de celulares para descarte | MÉDIA       |
+| RF-006 | Acordion com informações sobre sustentabilidade | MÉDIA       |
+| RF-007 | Salvar os produtos como favotitos | BAIXA       |
+| RF-008 | Formulário de fale conosco | ALTA       |
+| RF-009 | Formulário de review | MÉDIA       |
+| RF-010 | Barra de pesquisa do produto por modelo e marca | ALTA       |
+| RF-011 | Filtro dos produtos por marca, modelo, preço, bateria, etc. | MÉDIA       |
 
 ### Requisitos não funcionais
 
 | ID      | Descrição do Requisito                                                              | Prioridade |
 | ------- | ------------------------------------------------------------------------------------- | ---------- |
 | RNF-001 | O sistema deve ser responsivo para rodar em dispositivos móveis | MÉDIA     |
-
-
-
+| RNF-001 | O sistema deve ser fácil de usar | ALTA     |
+| RNF-001 | O sistema deve deve estar disponível 24h por dia 7 dias por semana | ALTA     |
 
 ## Restrições
 
