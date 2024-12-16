@@ -12,13 +12,6 @@
 ![Captura de tela 2024-11-17 133216](https://github.com/user-attachments/assets/6681db17-d90f-4aa1-9afd-d65f2762282b)
 
 
-
-
-> **Links úteis**:
-> - [User flow: o quê é e como fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User flow vs site maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 user flow tools & templates for smooth](https://www.mockplus.com/blog/post/user-flow-tools)
-
 ## Wireframes
 <img width="952" alt="image" src="https://github.com/user-attachments/assets/36cf3aec-ca8d-4b93-a39f-f952b1e60300">
 <img width="950" alt="image" src="https://github.com/user-attachments/assets/041214c9-55c5-401e-898d-490d89622770">
