@@ -2,14 +2,6 @@
 Relação de Ambientes de Trabalho
 Os artefatos do projeto EcoCel são desenvolvidos com suporte de diversas plataformas que otimizam a colaboração, organização e desenvolvimento do produto. A seguir, apresenta-se a relação detalhada dos ambientes, suas plataformas e os respectivos links de acesso:
 
-## Ambiente	Plataforma	Link de Acesso
-Processo de Design Thinking	- Miro	
-Repositório de Código-fonte	GitHub	
-Documentos do Projeto	- Google Drive	
-Gerenciamento do Projeto	- GitHub Projects	
-Projeto de Interface - Figma	
-
-
 ## Controle de Versão
 A ferramenta adotada para controle de versão é o Git, com repositórios hospedados no GitHub. O fluxo de trabalho é baseado no GitFlow, assegurando uma estrutura clara para desenvolvimento e integração contínuos.
 
