@@ -10,15 +10,14 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 Esta seção apresenta as funcionalidades da solução.
 
-##### Funcionalidade 1 - Cadastro de contatos ⚠️ EXEMPLO ⚠️
+##### Funcionalidade 1 - Cadastro de usuários
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+Permite o cadastro de usuários no site
 
-* **Estrutura de dados:** [Contatos](#estrutura-de-dados---contatos)
+* **Estrutura de dados:** [Usuarios](#estrutura-de-dados---contatos)
 * **Instruções de acesso:**
-  * Abra o site e efetue o login;
-  * Acesse o menu principal e escolha a opção "Cadastros";
-  * Em seguida, escolha a opção "Contatos".
+  * Abra o site e va na aba cadastrar;
+  * Preencha os dados e clique em "Cadastrar".
 * **Tela da funcionalidade**:
 
 ![Tela de funcionalidade](images/exemplo-funcionalidade.png)
