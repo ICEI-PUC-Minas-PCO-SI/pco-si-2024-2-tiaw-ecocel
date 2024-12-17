@@ -65,6 +65,7 @@ O nível de prioridade foi feito com base em ALTA = essêncial para o site e BAI
 | RF-009 | Formulário de review | MÉDIA       |
 | RF-010 | Barra de pesquisa do produto por modelo e marca | ALTA       |
 | RF-011 | Filtro dos produtos por marca, modelo, preço, bateria, etc. | MÉDIA       |
+| RF-012 | Login de usuário | ALTA       |
 
 ### Requisitos não funcionais
 
