@@ -13,29 +13,39 @@
 
 
 ## Wireframes
-![image](https://github.com/user-attachments/assets/c30a6e62-ea78-4e55-aa67-f32e2f7efeeb)
 
 Título da página: Home
+
 Descrição: Informações sobre nós e carrousel com as reviews do site.
+
+![image](https://github.com/user-attachments/assets/c30a6e62-ea78-4e55-aa67-f32e2f7efeeb)
+
+
+Título da página: Dispositivos
+
+Descrição: Cards com os produtos, barra de pesquisa, filtros e botão de adcionar aos favoritos.
 
 ![image](https://github.com/user-attachments/assets/479f940b-fa9d-4d4e-8244-1dc437f54cb3)
 
-Título da página: Dispositivos
-Descrição: Cards com os produtos, barra de pesquisa, filtros e botão de adcionar aos favoritos.
+Título da página: Especificações
+
+Descrição: Página com as especificações de cada produto, é acessada ao clicar em "Saiba mais" no card do celular.
 
 ![image](https://github.com/user-attachments/assets/2fe8d89d-6d0e-49c3-a6b6-9fb5b6b17735)
 
-Título da página: Especificações
-Descrição: Página com as especificações de cada produto, é acessada ao clicar em "Saiba mais" no card do celular.
+Título da página: Login
+
+Descrição: Página de login do usuário
 
 ![image](https://github.com/user-attachments/assets/62cd4a0b-b68d-4dee-a73a-5b9db6f08513)
-Título da página: Login
-Descrição: Página de login do usuário
+
+Título da página: Cadastro
+
+Descrição: Página de cadastro
 
 ![image](https://github.com/user-attachments/assets/3674cd21-3c85-41e2-916e-f1d06cc549ad)
 
-Título da página: Cadastro
-Descrição: Página de cadastro
+
 
 Título da página: 
 Descrição: 
