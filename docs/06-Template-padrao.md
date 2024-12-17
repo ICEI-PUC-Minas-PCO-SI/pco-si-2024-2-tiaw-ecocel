@@ -2,10 +2,13 @@
 
 <span style="color:red">Pré-requisitos: <a href="03-Product-design.md"> Especificação do projeto</a></span>, <a href="04-Metodologia.md"> Metodologia</a>, <a href="05-Projeto-interface.md"> Projeto de interface</a>
 
-Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+### Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
 
-Cores padrão do site: 
-Fonte: 
+- Font-family: sans-serif
+- Cor de fundo do Header e footer: #3CB371
+- Cor da letra do Header: #FFFFFF
+- Cor da letra do restante: #000000
+- Cor de fundo: #FFFFFF e #f9f9f9
 
 ### Concepção do logo
 
