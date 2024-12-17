@@ -35,36 +35,42 @@ Descrição: Página com as especificações de cada produto, é acessada ao cli
 
 Título da página: Login
 
-Descrição: Página de login do usuário
+Descrição: Página de login do usuário.
 
 ![image](https://github.com/user-attachments/assets/62cd4a0b-b68d-4dee-a73a-5b9db6f08513)
 
 Título da página: Cadastro
 
-Descrição: Página de cadastro
+Descrição: Página de cadastro.
 
 ![image](https://github.com/user-attachments/assets/3674cd21-3c85-41e2-916e-f1d06cc549ad)
 
+Título da página: Confirmação de cadastro
+
+Descrição: Mensagem de cadastro confirmado e cards com produtos sugeridos.
+
+![image](https://github.com/user-attachments/assets/9bb24089-9428-40b2-8f5e-533b4a5978ff)
 
 
-Título da página: 
-Descrição: 
+Título da página: Sustentabilidade
 
-Título da página: 
-Descrição: 
+Descrição: Accordion com informações sobre sustentabilidade e link para a página de busca do ponto de coleta de lixo eletrônico.
 
-Título da página: 
-Descrição: 
-
-Título da página: 
-Descrição: 
+![image](https://github.com/user-attachments/assets/aff1437b-ec24-4b9d-bd08-30396b5e22b1)
 
 
+Título da página: Fale conosco
+
+Descrição: Formulário de contado e dados de contato.
+
+![image](https://github.com/user-attachments/assets/ffb00f67-651a-47e2-831f-68093814e737)
 
 
-<img width="952" alt="image" src="https://github.com/user-attachments/assets/36cf3aec-ca8d-4b93-a39f-f952b1e60300">
-<img width="950" alt="image" src="https://github.com/user-attachments/assets/041214c9-55c5-401e-898d-490d89622770">
-<img width="573" alt="image" src="https://github.com/user-attachments/assets/6f4bfff9-e85a-43a9-8106-55cf7bbb09c1">
+Título da página: Reviews
+
+Descrição: Formuláriode envio de avaliação do site.
+
+![image](https://github.com/user-attachments/assets/f04eb921-8125-41e3-a485-57479bdac665)
 
 ### Protótipo Interativo
 https://www.figma.com/proto/ZsqxIZWDPTXOhLyPAtohpG/Prototipo?m=dev&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&node-id=17-591&starting-point-node-id=17%3A591
