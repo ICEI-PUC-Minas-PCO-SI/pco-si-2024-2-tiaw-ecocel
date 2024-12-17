@@ -90,7 +90,7 @@ Permite aos usuários salvar produtos como favoritos e depois visualizá-los.
 
 Permite aos usuários enviar um comentário de avaliação do site.
 
-* **Estrutura de dados:** [Produtos](#estrutura-de-dados---review)
+* **Estrutura de dados:** [Reviews](#estrutura-de-dados---review)
 * **Instruções de acesso:**
   * Abra o site e vá na aba Reviews;
   * Preencha os dados(Nome, email, título, nota e descrição);
@@ -103,7 +103,7 @@ Permite aos usuários enviar um comentário de avaliação do site.
 
 Permite aos usuários verem as avaliações do site.
 
-* **Estrutura de dados:** [Produtos](#estrutura-de-dados---review)
+* **Estrutura de dados:** [Reviews](#estrutura-de-dados---review)
 * **Instruções de acesso:**
   * Abra o site e vá na aba Home;
   * Na tela é possível ver o carrousel com as reviews e é possível clicar nas setas para ver a próxima ou anterior.
