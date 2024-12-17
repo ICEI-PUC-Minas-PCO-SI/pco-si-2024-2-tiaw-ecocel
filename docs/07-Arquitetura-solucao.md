@@ -58,32 +58,97 @@ Permite os usuários visualizar os produtos e filtrar os dados
   * Clique em "Filtrar"
 * **Tela da funcionalidade**:
 
-![image](https://github.com/user-attachments/assets/4936d692-a455-44c2-9b10-d21adb6b9864)
+![image](https://github.com/user-attachments/assets/16ad5869-8643-4727-a7a5-c7d047db2b89)
 
-##### Funcionalidade 2 - Login
+##### Funcionalidade 5 - Barra de pesquisa
 
-Permite os usuários logar no site
+Permite os usuários pesquisar o produto por modelo ou marca
 
-* **Estrutura de dados:** [Usuários](#estrutura-de-dados---usuários)
+* **Estrutura de dados:** [Produtos](#estrutura-de-dados---produtos)
 * **Instruções de acesso:**
-  * Abra o site e vá na aba Login;
-  * Preencha os dados e clique em "Login".
+  * Abra o site e vá na aba Dispositivos;
+  * Digite o nome do modelo ou marca do celula;
+  * Clique no botão de lupa ou aperte Enter.
 * **Tela da funcionalidade**:
 
-![image](https://github.com/user-attachments/assets/4936d692-a455-44c2-9b10-d21adb6b9864)
+![image](https://github.com/user-attachments/assets/a208709c-2a59-478f-8c4a-fd8b20f16fc9)
 
-##### Funcionalidade 2 - Login
+##### Funcionalidade 6 - Adcionar aos favoritos
 
-Permite os usuários logar no site
+Permite aos usuários salvar produtos como favoritos e depois visualizá-los.
 
-* **Estrutura de dados:** [Usuários](#estrutura-de-dados---usuários)
+* **Estrutura de dados:** [Produtos](#estrutura-de-dados---produtos)
 * **Instruções de acesso:**
-  * Abra o site e vá na aba Login;
-  * Preencha os dados e clique em "Login".
+  * Abra o site e vá na aba Dispositivos;
+  * Clique no ícone de coração no card que deseja marcar como favorito(se já tiver marcado, ao clicar é desfavoritado);
+  * Esse produto ficará salvo como favorito, também é possível usar o filtro para ver todos os favoritos.
 * **Tela da funcionalidade**:
 
-![image](https://github.com/user-attachments/assets/4936d692-a455-44c2-9b10-d21adb6b9864)
+![image](https://github.com/user-attachments/assets/64424d68-5cd4-4746-80c0-ae41d74b529e)
 
+##### Funcionalidade 7 - Adcionar avaliação do site
+
+Permite aos usuários enviar um comentário de avaliação do site.
+
+* **Estrutura de dados:** [Produtos](#estrutura-de-dados---review)
+* **Instruções de acesso:**
+  * Abra o site e vá na aba Reviews;
+  * Preencha os dados(Nome, email, título, nota e descrição);
+  * Clique em "Enviar".
+* **Tela da funcionalidade**:
+
+![image](https://github.com/user-attachments/assets/edc6fb15-bb7e-4994-8311-b5c3055f348d)
+
+##### Funcionalidade 8 - Carrousel de reviews
+
+Permite aos usuários verem as avaliações do site.
+
+* **Estrutura de dados:** [Produtos](#estrutura-de-dados---review)
+* **Instruções de acesso:**
+  * Abra o site e vá na aba Home;
+  * Na tela é possível ver o carrousel com as reviews e é possível clicar nas setas para ver a próxima ou anterior.
+* **Tela da funcionalidade**:
+
+![image](https://github.com/user-attachments/assets/9e6b1421-8670-48eb-af35-7e89c69531ad)
+
+##### Funcionalidade 9 - Accordion de sustentabilidade
+
+Permite aos usuários verem dados importantes sobre sustentabilidade e manutenção do celular.
+
+* **Instruções de acesso:**
+  * Abra o site e vá na aba Sustentabilidade;
+  * Na tela é possível ver uma lista com informações;
+  * Clique no item que desejar e a decrição irá aparecer na tela.
+* **Tela da funcionalidade**:
+
+![image](https://github.com/user-attachments/assets/59e73b20-ad9f-4587-b498-a0aa62947dc6)
+
+##### Funcionalidade 10 - Buscar pontos de coleta de reciclagem próximos
+
+Permite aos usuários verem pontos de coleta de reciclagem prócimos a sua casa
+
+* **Instruções de acesso:**
+  * Abra o site e vá na aba Sustentabilidade;
+  * Clique no item: "Como descartar lixo eletrônico";
+  * Clique no link: "Veja se há locais de descarte próximos a você!";
+  * Digite seu CEP;
+  * Digite a distância máxima desejada em metros(por padrão 5000);
+  * Clique em "Buscar".
+* **Tela da funcionalidade**:
+
+![image](https://github.com/user-attachments/assets/77ab72d5-14f8-4192-8603-cd1d1728ba44)
+
+##### Funcionalidade 11 - Formulário de contato
+
+Permite aos usuários enviarem uma mensagem de contato.
+
+* **Instruções de acesso:**
+  * Abra o site e vá na aba Contato;
+  * Preencha os dados (Nome, Email, Motivo do contato e Mensagem);
+  * Clique em "Enviar".
+* **Tela da funcionalidade**:
+
+![image](https://github.com/user-attachments/assets/e57a519e-9b37-43af-875c-7134c63b44c6)
 
 ### Estruturas de dados
 
