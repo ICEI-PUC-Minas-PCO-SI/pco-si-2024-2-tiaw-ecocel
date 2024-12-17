@@ -4,7 +4,8 @@
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
-![Arquitetura da Solução](https://github.com/user-attachments/assets/abc998a5-17fd-443d-82a2-1db1790bf81c)
+![Arquitetura da Solução](https://github.com/user-attachments/assets/b7237b41-337a-4c79-97f9-b389f3e1c693)
+
 
 ## Funcionalidades
 
