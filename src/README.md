@@ -47,7 +47,7 @@ src/  (esta pasta aqui)
 ## Parte front-end
 
 * Pasta `assets`: destinada aos arquivos de formatação (CSS), scripts (JS), imagens utilizadas no site (JPG, PNG, GIF, SVG etc.), fontes (TTF) e outros arquivos gerais utilizados por todo o site.
-* Pasta `modulos`: onde devem ser armazenados os arquivos relacionados à implementação das funcionalidades do site. Recomenda-se criar uma subpasta para cada novo módulo ou funcionalidade, o que também pode facilitar a divisão do trabalho entre os membros do grupo.
+* Pasta `modulos`: onde devem ser armazenados os arquivos relacionados à implementação das funcionalidades do site.
 * Arquivo `index.html`: arquivo que representa a "home page" do site.
 
 ## Parte back-end
