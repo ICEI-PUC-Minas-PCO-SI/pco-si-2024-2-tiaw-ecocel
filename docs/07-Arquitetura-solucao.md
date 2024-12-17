@@ -48,13 +48,56 @@ Registro dos usuários do sistema utilizados para login.
     }
 ```
 
+##### Estrutura de dados - Usuários
+
+Registro dos usuários do sistema utilizados para login.
+
+```json
+    {
+      "id": 1,
+      "login": "gustavo",
+      "senha": "gugu1301",
+      "nome": "gustavo",
+      "email": "gustavo@gmail.com",
+      "idade": 19,
+      "Profisao": "programador",
+      "orcamento": "1500",
+      "Marque as opções que você considera importantes em um celular": "desempenho",
+      "favoritos": [
+        3,
+        4
+      ]
+    }
+```
+##### Estrutura de dados - Usuários
+
+Registro dos usuários do sistema utilizados para login.
+
+```json
+    {
+      "id": 1,
+      "login": "gustavo",
+      "senha": "gugu1301",
+      "nome": "gustavo",
+      "email": "gustavo@gmail.com",
+      "idade": 19,
+      "Profisao": "programador",
+      "orcamento": "1500",
+      "Marque as opções que você considera importantes em um celular": "desempenho",
+      "favoritos": [
+        3,
+        4
+      ]
+    }
+```
+
 ### Módulos e APIs
 
 Esta seção apresenta os módulos e APIs utilizados na solução.
 
 **Scripts:**
 
-* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) ⚠️ EXEMPLO ⚠️
+* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/)
 
 ## Hospedagem
 
