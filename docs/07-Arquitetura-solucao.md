@@ -100,10 +100,4 @@ Esta seção apresenta os módulos e APIs utilizados na solução.
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foram realizados.
-
-> **Links úteis**:
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando seu site no Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+A hospedagem foi feita pelo Replit. Este repositório do GitHub foi conectado ao Replir e depois foi feito o deploy da aplicação.
