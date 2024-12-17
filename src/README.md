@@ -13,32 +13,54 @@ src/  (esta pasta aqui)
 │   ├── assets/
 │   │   ├── css/
 │   │   │   ├── styles.css
-│   │   │   └── (outros arquivos .css)
-│   │   │   └── (outros arquivos .css)
-│   │   │   └── (outros arquivos .css)
-│   │   │   └── (outros arquivos .css)
+│   │   │   └── didpoditivos.css
+│   │   │   └── especificacoes.css
+│   │   │   └── header.css
+│   │   │   └── home.css
+│   │   │   └── reviews.css
+│   │   │   └── style-Accordion.css
+│   │   │   └── style-API.css
 │   │   │
 │   │   ├── js/
-│   │   │   ├── app.js
-│   │   │   └── (outros arquivos .js)
+│   │   │   ├── sustentabilidade.js
+│   │   │   └── (cadastrosucesso.js)
+│   │   │   └── (dispositivos.js)
+│   │   │   └── (especificacoes.js)
+│   │   │   └── (footer.js)
+│   │   │   └── (header.js)
+│   │   │   └── (headerDispositivos.js)
+│   │   │   └── (login.js)
 │   │   │
 │   │   ├── images/
 │   │   │   ├── logo.png
+│   │   │   ├── logo2.png
+│   │   │   ├── instagram.png
+│   │   │   ├── youtube.png
+│   │   │   ├── avatar.png
 │   │   │   └── (padrão para as fotos de dispositivos: nome_do_celular .png ou nome_do_celular.jpeg)
 │   │   
 │   │
 │   ├── modulos/
-│   │   ├── modulo-1/
-│   │   │   └── (arquivos do módulo)
-│   │   │
-│   │   └── modulo-2/
-│   │       └── (arquivos do módulo)
+│   │   ├── login/
+│   │   │   ├── index.html
+│   │   │   └── login.html
 │   │
 │   ├── index.html (página inicial front-end)
 │   ├── about.html
-│   ├── contact.html
-│   └── (outras páginas)
+│   ├── API.html (Busca de pontos de reciclagem utiliazndo api do google maps)
+│   ├── cadastrocliente.html
+│   ├── cadastroclientesucesso.html
+│   ├── cadastroprodutos.html
+│   ├── contato.html
+│   ├── dispositivos.html
+│   ├── especificacoes.html
+│   ├── reviews.html
+│   └── susrentabilidade
 │
+│── node_modules/
+│── css/
+│   ├── style.css (css padrão do site)
+│  
 │── index.js (app back-end)
 │── package.json (configuração back-end)
 └── README.md (este arquivo aqui)
