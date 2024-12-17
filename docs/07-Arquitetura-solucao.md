@@ -14,19 +14,13 @@ Esta seção apresenta as funcionalidades da solução.
 
 Permite o cadastro de usuários no site
 
-* **Estrutura de dados:** [Usuarios](#estrutura-de-dados---contatos)
+* **Estrutura de dados:** [Usuários](#estrutura-de-dados---usuarios)
 * **Instruções de acesso:**
-  * Abra o site e va na aba cadastrar;
+  * Abra o site e va na aba Cadastro;
   * Preencha os dados e clique em "Cadastrar".
 * **Tela da funcionalidade**:
 
-![Tela de funcionalidade](images/exemplo-funcionalidade.png)
-
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários, quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) títulos e descrição da funcionalidade; (2) estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
+![Tela de funcionalidade](https://github.com/user-attachments/assets/bf830b12-15ec-44f8-8376-85900d70259f)
 
 ### Estruturas de dados
 
@@ -49,19 +43,26 @@ Contatos da aplicação
   
 ```
 
-##### Estrutura de dados - Usuários  ⚠️ EXEMPLO ⚠️
+##### Estrutura de dados - Usuários
 
 Registro dos usuários do sistema utilizados para login e para o perfil do sistema.
 
 ```json
-  {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
-  }
+    {
+      "id": 1,
+      "login": "gustavo",
+      "senha": "gugu1301",
+      "nome": "gustavo",
+      "email": "gustavo@gmail.com",
+      "idade": 19,
+      "Profisao": "programador",
+      "orcamento": "1500",
+      "Marque as opções que você considera importantes em um celular": "desempenho",
+      "favoritos": [
+        3,
+        4
+      ]
+    }
 ```
 
 > ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
